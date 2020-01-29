@@ -10,15 +10,15 @@ const SoundFadePlugin  = require('../plugins/rexsoundfadeplugin');
  */
 
 const defaultConfig = {
-  width: 640,
-  height: 480,
+  width: 1024,
+  height: 768,
   transparent: false,
   physics: {
     default: 'arcade',
   },
   scale: {
     mode: Phaser.Scale.FIT,
-    autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: 'phaser',
   },
   loader: {

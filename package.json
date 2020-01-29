@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack/prod.js ",
     "start": "webpack-dev-server --config webpack/base.js",
-    "compress": "chmod +x bash/compress.sh && bash/compress.sh"
+    "compress": "chmod +x bash/compress.sh && bash/compress.sh",
+    "serve": "npm run build && node_modules/.bin/http-server dist -a localhost -p 8000"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/photonstorm/phaser3-project-template#readme",
   "devDependencies": {
+    "http-server": "^0.11.1",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.5",

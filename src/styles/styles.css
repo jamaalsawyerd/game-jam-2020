@@ -1,8 +1,8 @@
 body {
   margin: 0;
+  background-image:url(/images/background.png);
 }
 
 canvas {
   display: block;
-  margin: 0 auto !important;
 }

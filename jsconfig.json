@@ -2,10 +2,6 @@
   "exclude": [
     "node_modules",
     "dist",
-    "shared/audio",
-    "shared/images",
-    "build",
-    "build_assets",
-    "build_source"
+    "package-lock.json"
   ]
 }

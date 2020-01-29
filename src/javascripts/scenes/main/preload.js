@@ -1,7 +1,7 @@
 const preload = function() {
   console.log('preload');
-  this.load.setPath('/images');
-  this.load.image('logo', 'logo.png');
+  this.load.glsl('starfields', 'shaders/starfields.glsl.js');
+  this.load.image('logo', 'images/logo.png');
 };
 
 module.exports = preload;
