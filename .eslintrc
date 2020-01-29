@@ -1,0 +1,74 @@
+{
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "ecmascript": 6
+  },
+  "rules": {
+    "semi": "error",
+    "strict": "off",
+    "quotes": [ "error", "single", { "avoidEscape": true, "allowTemplateLiterals": true } ],
+    "camelcase": "off",
+    "no-unused-vars": [ "error", { "argsIgnorePattern": "^_|^(e|view)$" } ],
+    "space-before-blocks": [ "error" ],
+    "keyword-spacing": [ "error", {
+      "overrides": {
+        "catch":    { "after": false },
+        "for":      { "after": false },
+        "function": { "after": false },
+        "if":       { "after": false },
+        "switch":   { "after": false },
+        "while":    { "after": false }
+      }
+    }],
+    "space-before-function-paren": [ "error", {
+      "anonymous":  "never",
+      "named":      "never",
+      "asyncArrow": "ignore"
+    }]
+  },
+  "globals": {
+    "Chaplin": true,
+    "Backbone": true,
+    "Handlebars": true,
+    "Offline": true,
+    "createjs": true,
+    "Phaser": true,
+    "SpinePlugin": true,
+    "i18next": true,
+    "jwplayer": true,
+    "YT": true,
+    "Chart": true,
+    "YAML": true,
+    "marked": true,
+    "AniJS": true,
+    "AOS": true,
+    "EF": true,
+    "require": true,
+    "ga": true,
+    "_": true,
+    "$": true,
+    "MODULE_JSON": true,
+    "module": true,
+    "kb": true,
+    "ko": true,
+    "dashjs": true,
+    "ControlBar": true,
+    "Promise": true,
+    "Set": true,
+    "expect": true,
+    "describe": true,
+    "it": true,
+    "before": true,
+    "after": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "sinon": true,
+    "chai": true,
+    "fixture": true
+  }
+}
