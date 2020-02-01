@@ -15,6 +15,7 @@ const create = function() {
     ui: new UILayer(phaserGroupManager.add('ui'), this),
   };
   this._gameVars.controller = new MainSceneController(this);
+  this.controller = this._gameVars.controller;
 };
 
 
