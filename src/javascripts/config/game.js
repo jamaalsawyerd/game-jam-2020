@@ -10,8 +10,8 @@ const SoundFadePlugin = require('../plugins/rexsoundfadeplugin');
  */
 
 const defaultConfig = {
-  width: 1024,
-  height: 768,
+  width: 1920,
+  height: 1080,
   transparent: false,
   physics: {
     default: 'arcade',
