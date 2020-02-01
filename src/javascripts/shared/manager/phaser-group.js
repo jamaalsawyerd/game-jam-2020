@@ -1,12 +1,10 @@
 const Manager = require('./generic');
-/**
- * Manager Class for Phaser Groups
- * Nowhere near feature complete. Instantiates as a singleton
- */
+
 class PhaserGroupManager extends Manager {
-  constructor() {
+  constructor(scene) {
     super();
     this.scene = null;
+    this.init(scene);
   }
 
   init(scene) {
@@ -22,4 +20,4 @@ class PhaserGroupManager extends Manager {
     return this.objs[key];
   }
 }
-module.exports = new PhaserGroupManager();
+module.exports = PhaserGroupManager;

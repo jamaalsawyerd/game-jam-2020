@@ -3,7 +3,7 @@ const WebFontLoaderPlugin = require('../plugins/rexwebfontloader');
 const AwaitLoaderPlugin = require('../plugins/rexawaitloaderplugin');
 const HslAdjustPipelinePlugin = require('../plugins/rexhsladjustpipelineplugin');
 const VideoPlugin = require('../plugins/rexvideoplugin');
-const SoundFadePlugin  = require('../plugins/rexsoundfadeplugin');
+const SoundFadePlugin = require('../plugins/rexsoundfadeplugin');
 
 /**
  * Default configuration file for our Phaser games.
@@ -15,6 +15,9 @@ const defaultConfig = {
   transparent: false,
   physics: {
     default: 'arcade',
+    arcade: {
+      gravity: { y: 200 }
+    }
   },
   scale: {
     mode: Phaser.Scale.FIT,

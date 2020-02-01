@@ -4,11 +4,12 @@ const Manager = require('../manager/generic');
  * Layer class
  */
 class Layer {
-  constructor() {
+  constructor(group, scene) {
     this.group = null;
     this.scene = null;
     this.keys = [];
     this.objects = new Manager();
+    this.init(group, scene);
   }
 
   /**
