@@ -18,7 +18,7 @@ class GameLayer extends Layer {
     this.addObject('floor', floor);
 
     const offsetX = 200;
-    const groundY = centerY + 100;
+    const groundY = centerY + 115;
 
     const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
     const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xadd8e6 });

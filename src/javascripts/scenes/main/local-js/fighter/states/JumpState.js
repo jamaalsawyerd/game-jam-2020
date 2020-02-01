@@ -23,7 +23,6 @@ class JumpState extends State {
 
     const jumpAcclReduce = 10;
     if(movingLeft) {
-      console.log('here');
       fighter.body.setAccelerationX(-fighter.config.acceleration.x / jumpAcclReduce);
     } else if(movingRight) {
       fighter.body.setAccelerationX(fighter.config.acceleration.x / jumpAcclReduce);

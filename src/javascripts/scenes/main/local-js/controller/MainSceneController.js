@@ -12,6 +12,15 @@ class MainSceneController {
   onUpdate(time, delta) {
     this.scene.physics.world.collide(this.fighters, [this.floor, ...this.fighters]);
     this.stateMachines.forEach(sm => sm.step());
+    this.checkFighterPositions();
+  }
+
+  checkFighterPositions() {
+    this.fighters.forEach((f) => {
+      if(this.scene.physics.overlap(f, this.floor) ) {
+        f.y = this.scene.cameras.main.height - this.floor.height - f.height/2 - 5;
+      }
+    });
   }
 }
 

@@ -15,7 +15,7 @@ const FighterConfig = {
       y: 10000
     },
     jumpVel: {
-      x: 500,
+      x: 700,
       y: 2000,
     },
     friction: { x: 1000, y: 100 },
