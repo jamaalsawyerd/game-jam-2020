@@ -33,9 +33,12 @@ class JumpState extends State {
 
     if(fighter.body.touching.down && fighter.y > floor.y - floor.height - 5) {
       this.stateMachine.transition('idle');
+    } else if(fighter.body.touching.down) {
+      const { jumpVel } = fighter.config;
+      fighter.body.setVelocityY(-jumpVel.y * 0.8);
     }
-
   }
+
 }
 
 module.exports = JumpState;

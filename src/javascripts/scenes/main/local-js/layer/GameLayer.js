@@ -13,11 +13,12 @@ class GameLayer extends Layer {
     scene.physics.add.existing(floor);
     floor.body.immovable = true;
     floor.body.allowGravity = false;
+    floor.body.setMass(100000);
     this.group.add(floor);
     this.addObject('floor', floor);
 
     const offsetX = 200;
-    const groundY = centerY + 120;
+    const groundY = centerY + 100;
 
     const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
     const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xadd8e6 });

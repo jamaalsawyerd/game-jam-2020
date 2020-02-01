@@ -12,11 +12,11 @@ const FighterConfig = {
     maxSpeed: 10000,
     maxVel: {
       x: 500,
-      y: 1000
+      y: 10000
     },
     jumpVel: {
       x: 500,
-      y: 1000,
+      y: 2000,
     },
     friction: { x: 1000, y: 100 },
     drag: { x: 500, y: 0 },

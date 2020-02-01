@@ -16,7 +16,7 @@ const defaultConfig = {
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 1000 }
+      gravity: { y: 5000 }
     }
   },
   scale: {
