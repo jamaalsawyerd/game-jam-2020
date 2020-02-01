@@ -13,12 +13,16 @@ const FighterConfig = {
       x: 250,
       y: 1500
     },
+    jumpMaxVel: {
+      x:500,
+      y: 1500,
+    },
     jumpVel: {
       x: 500,
       y: 1500,
     },
     friction: { x: 1000, y: 100 },
-    drag: { x: 500, y: 0 },
+    drag: { x: 1000, y: 0 },
     worldBounce: { x: 0, y: 0 },
     bounce: { x: 10000, y: 500 },
     mass: 1,

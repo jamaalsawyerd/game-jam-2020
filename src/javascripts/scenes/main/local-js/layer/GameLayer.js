@@ -14,7 +14,7 @@ class GameLayer extends Layer {
     this.group.add(background);
 
     const floorHeight = 60;
-    const floor = scene.add.rectangle(centerX, height - floorHeight, width, floorHeight, 0xb5651d, 1).setOrigin(0.5, 0).setAlpha(0);
+    const floor = scene.add.rectangle(centerX, height - floorHeight, width, floorHeight, 0xb5651d, 1).setOrigin(0.5, 0).setAlpha(0.8);
     // floor.setAlpha(0);
     scene.physics.add.existing(floor);
     floor.body.immovable = true;
