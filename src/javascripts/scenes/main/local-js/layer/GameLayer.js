@@ -9,14 +9,15 @@ class GameLayer extends Layer {
     //get camera vars
     const { centerX, centerY, width, height } = scene.cameras.main;
     // create the floor
-    const floor = scene.add.rectangle(centerX, height * 0.75, width, height * 0.25, 0xb5651d, 1).setOrigin(0.5, 0);
+    const floor = scene.add.rectangle(centerX, height * 0.75, width * 4, height * 0.25, 0xb5651d, 1).setOrigin(0.5, 0);
+    const background = scene.add.image(centerX, centerY, 'main_background')
     scene.physics.add.existing(floor);
     floor.body.immovable = true;
     floor.body.allowGravity = false;
     this.group.add(floor);
     this.addObject('floor', floor);
 
-    const offsetX = 200;
+    const offsetX = 200;  
     const groundY = centerY + 140;
 
     const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
