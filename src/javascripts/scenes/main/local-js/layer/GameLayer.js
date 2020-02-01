@@ -6,41 +6,49 @@ const FighterConfig = require('../../../../config/fighter');
 class GameLayer extends Layer {
   constructor(group, scene) {
     super(group, scene);
+    this;
     //get camera vars
     const { centerX, centerY, width, height } = scene.cameras.main;
     // create the floor
-    const floor = scene.add.rectangle(centerX, height * 0.75, width * 4, height * 0.25, 0xb5651d, 1).setOrigin(0.5, 0);
-    const background = scene.add.image(centerX, centerY, 'main_background')
+    const background = scene.add.image(centerX, centerY, 'mainBackground');
+    this.group.add(background);
+
+    const floorHeight = 60;
+    const floor = scene.add.rectangle(centerX, height - floorHeight, width, floorHeight, 0xb5651d, 1).setOrigin(0.5, 0).setAlpha(0);
+    // floor.setAlpha(0);
     scene.physics.add.existing(floor);
     floor.body.immovable = true;
     floor.body.allowGravity = false;
+    floor.body.setMass(100000);
     this.group.add(floor);
     this.addObject('floor', floor);
 
-    const offsetX = 200;  
-    const groundY = centerY + 140;
+    const offsetX = 200;
+    const groundY = floor.y - 75;
 
-    const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
-    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xadd8e6 });
-    
+    const { controlConfig, defaultFighterVars, defaultFighterConfig, fighterAnims } = FighterConfig;
+    this.createFighterAnimations(scene, fighterAnims);
 
+    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood' }, facing: 'right' });
     const f1Vars = { ...defaultFighterVars };
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
-    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xfed8b1 });
-    const f2Vars = { ...defaultFighterVars, direction: 'left' };
+    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood' }, facing: 'left' });
+    const f2Vars = { ...defaultFighterVars };
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
 
     // The state machine managing the hero
     const stateMachines = [
       new FighterStateMachine({
         key: 'fighter1',
+        floor,
         fighter: fighter1,
         controls: f1Controls,
         fVars: { ...f1Vars },
       }, scene),
       new FighterStateMachine({
         key: 'fighter2',
+        floor,
         fighter: fighter2,
         controls: f2Controls,
         fVars: f2Vars,
@@ -61,5 +69,27 @@ class GameLayer extends Layer {
     return input;
   }
 
+  createFighterAnimations(scene, config) {
+    const { anims } = scene;
+    for(const a in config) {
+      const prefix = a;
+      const animData = config[a];
+      animData.forEach(data => {
+        const frames = anims.generateFrameNames('doctors', {
+          prefix: `${prefix}/${data.key}/`,
+          start: data.start,
+          end: data.end || data.start,
+          zeroPad: 0,
+          suffix: '.png',
+        });
+        anims.create({
+          key: `${prefix}_${data.animName || data.key}`,
+          frames,
+          repeat: data.repeat || 0,
+          frameRate: data.fps || 10,
+        });
+      });
+    }
+  }
 }
 module.exports = GameLayer;
