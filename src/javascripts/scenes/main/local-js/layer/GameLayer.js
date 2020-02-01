@@ -9,6 +9,9 @@ class GameLayer extends Layer {
     //get camera vars
     const { centerX, centerY, width, height } = scene.cameras.main;
     // create the floor
+    const background = scene.add.image(centerX, centerY, 'mainBackground');
+    this.group.add(background);
+
     const floor = scene.add.rectangle(centerX, height * 0.75, width, height * 0.25, 0xb5651d, 1).setOrigin(0.5, 0);
     scene.physics.add.existing(floor);
     floor.body.immovable = true;
@@ -21,13 +24,13 @@ class GameLayer extends Layer {
     const groundY = centerY + 115;
 
     const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
-    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xadd8e6 });
-    
+    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig }, defaultColor: 0xadd8e6 });
+
 
     const f1Vars = { ...defaultFighterVars };
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
-    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xfed8b1 });
+    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig }, defaultColor: 'black' });
     const f2Vars = { ...defaultFighterVars, direction: 'left' };
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
 
