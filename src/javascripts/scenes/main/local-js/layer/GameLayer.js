@@ -19,13 +19,14 @@ class GameLayer extends Layer {
     const offsetX = 200;
     const groundY = centerY + 140;
 
-    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { defaultColor: 0xadd8e6 });
-    const { controlConfig, defaultFighterVars } = FighterConfig;
+    const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
+    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xadd8e6 });
+    
 
     const f1Vars = { ...defaultFighterVars };
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
-    const fighter2 = new Fighter(scene, centerX + 200, groundY, { defaultColor: 0xfed8b1 });
+    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xfed8b1 });
     const f2Vars = { ...defaultFighterVars, direction: 'left' };
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
 

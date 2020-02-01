@@ -19,7 +19,7 @@ class StateMachine {
   step() {
     // On the first step, the state is null and we need to initialize the first state.
     if(this.state === null) {
-      this.log(`entering initial state: ${this.initialState}`);
+      // this.log(`entering initial state: ${this.initialState}`);
       this.state = this.initialState;
       this.possibleStates[this.state].enter(this.scene, this.stateParams);
     }
@@ -28,8 +28,8 @@ class StateMachine {
     this.possibleStates[this.state].execute(this.scene, this.stateParams);
   }
 
-  transition(newState, enterParams) {
-    this.log(`transitioning state: ${this.state} => ${newState}`);
+  transition(newState, enterParams = {}) {
+    // this.log(`transitioning state: ${this.state} => ${newState}`);
     this.state = newState;
     this.possibleStates[this.state].enter(this.scene, this.stateParams, enterParams);
   }

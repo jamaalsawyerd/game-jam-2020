@@ -10,7 +10,7 @@ class MainSceneController {
   }
 
   onUpdate(time, delta) {
-    this.scene.physics.world.collide(this.fighters, this.floor);
+    this.scene.physics.world.collide(this.fighters, [this.floor, ...this.fighters]);
     this.stateMachines.forEach(sm => sm.step());
   }
 }

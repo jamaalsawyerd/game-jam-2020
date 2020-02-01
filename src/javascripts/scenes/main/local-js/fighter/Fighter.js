@@ -1,18 +1,24 @@
 class Fighter extends Phaser.GameObjects.Container {
   constructor(scene, x, y, params) {
     super(scene, x, y);
-
+    const { config } = params;
+    this.config = config;
     //temp 
     this.setSize(50, 100);
     this.defaultColor = params.defaultColor ? params.defaultColor : 0xffffff;
-    const body = scene.add.rectangle(0, 0, 50, 100, this.defaultColor, 1);
+    const sprite = scene.add.rectangle(0, 0, 50, 100, this.defaultColor, 1);
 
-    this.add(body);
+    this.add(sprite);
 
     this._classVars = {
-      body,
+      sprite,
     };
     scene.physics.add.existing(this);
+    this.body.setCollideWorldBounds(true, config.worldBounce.x, config.worldBounce.y);
+    this.body.setMaxSpeed(config.maxSpeed);
+    this.body.setAllowDrag(true);
+    this.body.setDrag(config.drag.x, config.drag.y);
+    this.body.setFriction(config.friction.x, config.friction.y);
     scene.add.existing(this);
   }
 
