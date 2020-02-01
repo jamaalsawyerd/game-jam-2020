@@ -17,8 +17,8 @@ class MainSceneController {
 
   checkFighterPositions() {
     this.fighters.forEach((f) => {
-      if(this.scene.physics.overlap(f, this.floor) ) {
-        f.y = this.scene.cameras.main.height - this.floor.height - f.height/2 - 5;
+      if( f.y + f.height/2 > this.floor.y) {
+        f.y = this.floor.y - 5;
       }
     });
   }

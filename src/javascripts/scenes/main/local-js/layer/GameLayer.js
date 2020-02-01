@@ -12,7 +12,7 @@ class GameLayer extends Layer {
     const background = scene.add.image(centerX, centerY, 'mainBackground');
     this.group.add(background);
 
-    const floor = scene.add.rectangle(centerX, height * 0.75, width, height * 0.25, 0xb5651d, 1).setOrigin(0.5, 0);
+    const floor = scene.add.rectangle(centerX, height - 90, width, 1000, 0xb5651d, 1).setOrigin(0.5, 0);
     scene.physics.add.existing(floor);
     floor.body.immovable = true;
     floor.body.allowGravity = false;
@@ -21,7 +21,7 @@ class GameLayer extends Layer {
     this.addObject('floor', floor);
 
     const offsetX = 200;
-    const groundY = centerY + 115;
+    const groundY = floor.y - 75 ;
 
     const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
     const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig }, defaultColor: 0xadd8e6 });
