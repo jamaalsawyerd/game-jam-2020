@@ -10,15 +10,15 @@ class MainSceneController {
   }
 
   onUpdate(time, delta) {
+    this.checkFighterPositions();
     this.scene.physics.world.collide(this.fighters, [this.floor, ...this.fighters]);
     this.stateMachines.forEach(sm => sm.step());
-    this.checkFighterPositions();
   }
 
   checkFighterPositions() {
     this.fighters.forEach((f) => {
       if( f.y + f.height/2 > this.floor.y) {
-        f.y = this.floor.y - 5;
+        f.y = this.floor.y - f.height/2;
       }
     });
   }

@@ -1,6 +1,6 @@
 const State = require('../../../../../shared/state-machine/State');
 class JumpState extends State {
-  enter(scene, stateParams) {
+  enter(scene, stateParams, enterParams) {
     const { controls, fighter } = stateParams;
     const { left, right } = controls;
     const bothDown = left.isDown && right.isDown;
@@ -8,11 +8,14 @@ class JumpState extends State {
     const direction = bothDown || noneDown ? undefined : `${left.isDown ? 'left' : 'right'}`;
 
     const { jumpVel } = fighter.config;
+    
     fighter.body.setVelocityY(-jumpVel.y);
+
     if(direction) {
       const velX = direction === 'left' ? -jumpVel.x : jumpVel.x;
       fighter.body.setVelocityX(velX);
     }
+    fighter.playAnim('jump');
   }
 
   execute(scene, stateParams) {
@@ -30,7 +33,7 @@ class JumpState extends State {
       fighter.body.setAccelerationX(0);
     }
 
-    if(fighter.body.touching.down && fighter.y > floor.y - floor.height - 5) {
+    if(fighter.body.touching.down && fighter.y + fighter.height/2 > floor.y - 5) {
       this.stateMachine.transition('idle');
     } else if(fighter.body.touching.down) {
       const { jumpVel } = fighter.config;
