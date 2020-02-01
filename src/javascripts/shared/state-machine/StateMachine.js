@@ -5,16 +5,21 @@ class StateMachine {
     this.stateParams = stateParams;
     this.state = null;
     this.scene = scene;
-
+    this.key = stateParams.key || 'default';
     // State instances get access to the state machine via this.stateMachine.
     for(const state of Object.values(this.possibleStates)) {
       state.stateMachine = this;
     }
   }
 
+  log(msg) {
+    console.log(`${this.key}: ${msg}`);
+  }
+
   step() {
     // On the first step, the state is null and we need to initialize the first state.
     if(this.state === null) {
+      this.log(`entering initial state: ${this.initialState}`);
       this.state = this.initialState;
       this.possibleStates[this.state].enter(this.scene, this.stateParams);
     }
@@ -24,6 +29,7 @@ class StateMachine {
   }
 
   transition(newState, enterParams) {
+    this.log(`transitioning state: ${this.state} => ${newState}`);
     this.state = newState;
     this.possibleStates[this.state].enter(this.scene, this.stateParams, enterParams);
   }

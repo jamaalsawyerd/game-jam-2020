@@ -1,9 +1,6 @@
-const update = function() {
-  const { _gameVars } = this;
-  const { layers } = _gameVars;
-  const fighter = layers.game.getObject('fighter');
-  const floor = layers.game.getObject('floor');
-  this.physics.world.collide(fighter, floor);
+const update = function(time, delta) {
+  const { controller } = this._gameVars;
+  controller.onUpdate(time, delta);
 };
 
 module.exports = update;
