@@ -8,13 +8,21 @@ const FighterConfig = {
   defaultFighterConfig: {
     acceleration: {
       x: 5000,
-      y: 100,
     },
-    maxSpeed: 500,
+    maxSpeed: 10000,
+    maxVel: {
+      x: 500,
+      y: 1000
+    },
+    jumpVel: {
+      x: 500,
+      y: 1000,
+    },
     friction: { x: 1000, y: 100 },
-    drag: { x: 1000, y: 1000 },
-    worldBounce: { x: 1, y: 0},
-    bounce: { x:1, y:1 }
+    drag: { x: 500, y: 0 },
+    worldBounce: { x: 0, y: 0},
+    bounce: { x:10000, y:1000 },
+    mass: 1,
   },
   controlConfig: {
     fighter1: {

@@ -5,7 +5,7 @@ class Fighter extends Phaser.GameObjects.Container {
     this.config = config;
     //temp
     const width = 75;
-    const height = 260; 
+    const height = 300; 
     this.setSize(width, height);
     this.defaultColor = params.defaultColor ? params.defaultColor : 0xffffff;
     const sprite = scene.add.rectangle(0, 0, width, height, this.defaultColor, 1);
@@ -18,9 +18,11 @@ class Fighter extends Phaser.GameObjects.Container {
     scene.physics.add.existing(this);
     this.body.setCollideWorldBounds(true, config.worldBounce.x, config.worldBounce.y);
     this.body.setMaxSpeed(config.maxSpeed);
+    this.body.setMaxVelocity(config.maxVel.x, config.maxVel.y);
     this.body.setAllowDrag(true);
     this.body.setDrag(config.drag.x, config.drag.y);
     this.body.setFriction(config.friction.x, config.friction.y);
+    this.body.setMass(config.mass);
     scene.add.existing(this);
   }
 

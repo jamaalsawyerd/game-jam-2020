@@ -17,7 +17,7 @@ class GameLayer extends Layer {
     this.addObject('floor', floor);
 
     const offsetX = 200;
-    const groundY = centerY + 140;
+    const groundY = centerY + 120;
 
     const { controlConfig, defaultFighterVars, defaultFighterConfig } = FighterConfig;
     const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: {...defaultFighterConfig}, defaultColor: 0xadd8e6 });
@@ -34,12 +34,14 @@ class GameLayer extends Layer {
     const stateMachines = [
       new FighterStateMachine({
         key: 'fighter1',
+        floor,
         fighter: fighter1,
         controls: f1Controls,
         fVars: { ...f1Vars },
       }, scene),
       new FighterStateMachine({
         key: 'fighter2',
+        floor,
         fighter: fighter2,
         controls: f2Controls,
         fVars: f2Vars,
