@@ -23,14 +23,31 @@ class Fighter extends Phaser.GameObjects.Container {
 
     const attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0).setOrigin(0, 0.5);
     attackOneHitbox.setVisible(false);
-
-
-
     this.add(attackOneHitbox);
+
+    const particles = scene.add.particles('cross');
+    const xRange = 70;
+    const yRange = 80;
+    const emitter = particles.createEmitter({
+      x: { min: -xRange, max: xRange },
+      y: { min: -yRange, max: yRange },
+      scale: 0.5,
+      alpha: { start: 0.75, end: 0 },
+      frequency: 40,
+      lifespan: 400,
+      speedY: { min: -300, max: -400 },
+      active: true,
+    });
+    this.add(particles);
+    emitter.stop();
+
+
     this._classVars = {
       sprite,
       rect,
       attackOneHitbox,
+      particles,
+      emitter,
     };
 
     scene.physics.add.existing(this);
@@ -62,6 +79,12 @@ class Fighter extends Phaser.GameObjects.Container {
     const { currentAnim, isPlaying } = sprite.anims;
     return { currentAnim, isPlaying, key: sprite.anims.getCurrentKey() };
   }
+
+  emitParticles(time) {
+    this._classVars.emitter.start();
+    this.scene.time.delayedCall(time, () => this._classVars.emitter.stop());
+  }
+
   setInvincible() {
     this.isInvincible = true;
     this.scene.tweens.addCounter({
