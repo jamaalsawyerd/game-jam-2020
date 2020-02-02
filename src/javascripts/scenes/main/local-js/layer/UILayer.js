@@ -20,6 +20,9 @@ class UILayer extends Layer {
     this.left.setScale(-1);
     this.right.setOrigin(0, 0.5);
     this.cont.setScale(0.6);
+    this.left.setPosition(-163, 0);
+    this.right.setPosition(163, 0);
+    this.back.setPosition(4, -5);
 
     this.max_width = this.left.width;
     this.left.width = 0;
