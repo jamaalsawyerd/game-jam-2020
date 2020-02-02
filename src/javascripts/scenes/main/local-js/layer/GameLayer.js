@@ -26,15 +26,13 @@ class GameLayer extends Layer {
     const offsetX = 200;
     const groundY = floor.y - 75;
 
-    const { controlConfig, defaultFighterVars, defaultFighterConfig, fighterAnims } = FighterConfig;
+    const { controlConfig, defaultFighterConfig, fighterAnims } = FighterConfig;
     this.createFighterAnimations(scene, fighterAnims);
 
     const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood', key:'fighter1' }, facing: 'right' });
-    const f1Vars = { ...defaultFighterVars };
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
     const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood', key:'fighter2' }, facing: 'left' });
-    const f2Vars = { ...defaultFighterVars };
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
 
     // The state machine managing the hero
@@ -44,14 +42,12 @@ class GameLayer extends Layer {
         floor,
         fighter: fighter1,
         controls: f1Controls,
-        fVars: { ...f1Vars },
       }, scene),
       new FighterStateMachine({
         key: 'fighter2',
         floor,
         fighter: fighter2,
         controls: f2Controls,
-        fVars: f2Vars,
       }, scene),
     ];
 

@@ -1,9 +1,4 @@
 const FighterConfig = {
-  defaultFighterVars: {
-    isHit: false,
-    isRecovering: false,
-    directionFacing: 'right',
-  },
   defaultFighterConfig: {
     acceleration: {
       x: 5000,
