@@ -23,9 +23,9 @@ class Fighter extends Phaser.GameObjects.Container {
 
     let attackOneHitbox;
     if(config.character === 'blood') {
-      attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0.2).setOrigin(0, 0.5);
+      attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0).setOrigin(0, 0.5);
     } else {
-      attackOneHitbox = scene.add.rectangle(0, 20, 130, 100, 0xff0000, 0.2).setOrigin(0, 0.5);
+      attackOneHitbox = scene.add.rectangle(0, 20, 130, 100, 0xff0000, 0).setOrigin(0, 0.5);
     }
 
 
