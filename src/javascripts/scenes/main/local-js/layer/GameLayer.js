@@ -5,6 +5,12 @@ const FighterConfig = require('../../../../config/fighter');
 
 class GameLayer extends Layer {
   constructor(group, scene, data) {
+    if(!data.player1) {
+      data = {
+        player1: 'blood',
+        player2: 'foot',
+      };
+    }
     super(group, scene);
     this;
     //get camera vars
@@ -38,7 +44,7 @@ class GameLayer extends Layer {
 
     if(fighter1.config.character === fighter2.config.character) {
       const pipeline = this.scene.plugins.get('RexHslAdjustPipeline').add(this.scene, 'colorpipe');
-      pipeline.setHueRotate(0.5);
+      pipeline.setHueRotate(fighter1.config.character === 'blood' ? 0.5 : 0.15);
       fighter2._classVars.sprite.setPipeline('colorpipe');
     }
 

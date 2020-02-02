@@ -22,31 +22,27 @@ const create = function() {
   pipeline.setSatAdjust(0);
   selectEye.setPipeline('cs_colorpipe');
   selectSleep.setPipeline('cs_colorpipe');
-  const locks = [
-    this.add.image(selectSleep.x + 75, selectSleep.y - 95, 'lock').setScale(0.33).setTint(0x000000),
-    this.add.image(selectEye.x + 75, selectEye.y - 95, 'lock').setScale(0.33).setTint(0x000000),
-  ];
+  this.add.image(selectSleep.x + 75, selectSleep.y - 95, 'lock').setScale(0.33).setTint(0x000000);
+  this.add.image(selectEye.x + 75, selectEye.y - 95, 'lock').setScale(0.33).setTint(0x000000);
 
-  selectBlood.setInteractive({useHandCursor:true}).on('pointerdown', () => {
-    this.playerSelect[`player${this.selectIndex}`] = 'blood';
+  const onClick = (select) => {
+    this.playerSelect[`player${this.selectIndex}`] = select;
     this.selectIndex++;
     if(this.selectIndex > 2) {
       const { player1, player2 } = this.playerSelect;
-      this.game.scene.start('main', { player1, player2 });
+      this.game.scene.start('intro', { player1, player2 });
+      this.game.scene.stop('character-select');
     } else {
       selectText.setTexture('select_text_2');
     }
+  };
+
+  selectBlood.setInteractive({ useHandCursor: true }).on('pointerdown', () => {
+    onClick('blood');
   });
 
-  selectFoot.setInteractive({useHandCursor:true}).on('pointerdown', () => {
-    this.playerSelect[`player${this.selectIndex}`] = 'blood';
-    this.selectIndex++;
-    if(this.selectIndex > 2) {
-      const { player1, player2 } = this.playerSelect;
-      this.game.scene.start('main', { player1, player2 });
-    } else {
-      selectText.setTexture('select_text_2');
-    }
+  selectFoot.setInteractive({ useHandCursor: true }).on('pointerdown', () => {
+    onClick('foot');
   });
 
 };

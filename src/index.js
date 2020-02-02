@@ -10,6 +10,7 @@ const config = {
   scene: [
     CreditScene, 
     CharacterSelectScene,
+    IntroScene,
     MainScene,
     GameEndScene,
   ]
