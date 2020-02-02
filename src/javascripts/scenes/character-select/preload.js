@@ -9,6 +9,9 @@ const preload = function() {
   this.load.image('select_text_1', 'images/txt_selectahealer1.png');
   this.load.image('select_text_2', 'images/txt_selectahealer2.png');
   this.load.image('lock', 'images/lock.png');
+  this.load.image('csLogo', 'images/logo.png');
+  this.load.image('csChars', 'images/intro_characters.png');
+  
 };
 
 module.exports = preload;
