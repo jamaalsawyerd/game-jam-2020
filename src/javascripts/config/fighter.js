@@ -22,7 +22,7 @@ const FighterConfig = {
     bounce: { x: 1, y: 1 },
     mass: 1,
     health: 100,
-    damage: 5,
+    damage: 20,
   },
   controlConfig: {
     fighter1: {

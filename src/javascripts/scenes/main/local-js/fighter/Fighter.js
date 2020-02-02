@@ -41,7 +41,7 @@ class Fighter extends Phaser.GameObjects.Container {
     this.body.setDrag(config.drag.x, config.drag.y);
     this.body.setFriction(config.friction.x, config.friction.y);
     this.body.setMass(config.mass);
-    this.health = config.health;
+    this.health = 0;
     this.damage = config.damage;
     scene.add.existing(this);
     this.playAnim('idle');

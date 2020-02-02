@@ -66,10 +66,21 @@ class MainSceneController {
     if(a1Hit) {
       this.stateMachines[other].transition('hit');
       this.reportHit(this.stateMachines[other].key);
+      const fighter = this.fighters[other];
+      fighter.health += this.fighters[index].damage;
+      if (fighter.health >= fighter.config.health){
+        this.endGame();
+      }
+      console.log(fighter.health);
+      console.log(fighter.config.health);
+      this.ui.UpdateBar(this.stateMachines[other].key, fighter.health/ fighter.config.health);
     }
   }
   reportHit(key) {
     console.log(key);
+  }
+  endGame(){
+    alert("Game Over");
   }
 }
 

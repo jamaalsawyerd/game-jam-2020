@@ -22,6 +22,8 @@ class UILayer extends Layer {
 
     this.Unshake()
     this.max_width = this.left.width;
+    this.left.width = 0;
+    this.right.width = 0;
   }
 
   SetUIScale(scale){
@@ -37,7 +39,7 @@ class UILayer extends Layer {
   }
 
   Shake(){
-    rot = Phaser.Math.RND.between(0, 0.01);
+    const rot = Phaser.Math.RND.between(0, 0.01);
     this.back.setRotation(rot)
     perterb = Phaser.Math.RND.between(-5, 5);
     this.left.setPosition(this.left.x, this.left.y + perterb);
@@ -45,9 +47,9 @@ class UILayer extends Layer {
     this.right.setPosition(this.right.x, this.right.y+perterb);
   }
   Unshake(){
-    ytop = 0
-    y_offset = 5
-    x_offset = 160
+    const ytop = 0
+    const y_offset = 5
+    const x_offset = 160
     this.back.setPosition(4, ytop - y_offset);
     this.right.setPosition(x_offset, ytop)
     this.left.setPosition(-x_offset, ytop);
