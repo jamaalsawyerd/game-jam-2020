@@ -12,6 +12,8 @@ class MainSceneController {
   onUpdate(time, delta) {
     this.checkFighterFacing();
     this.checkFighterPositions();
+    this.checkFighterHit(0, 1);
+    this.checkFighterHit(1, 0);
     this.scene.physics.world.collide(this.fighters, this.floor);
     this.scene.physics.world.collide(this.fighters[0], this.fighters[1]);
     this.stateMachines.forEach(sm => sm.step());
@@ -33,6 +35,21 @@ class MainSceneController {
       this.fighters[1].facing = facing;
       this.fighters[0]._classVars.sprite.scaleX *= -1;
       this.fighters[1]._classVars.sprite.scaleX *= -1;
+      this.fighters[0]._classVars.attackOneHitbox.setOrigin(this.fighters[0]._classVars.attackOneHitbox.originX === 0 ? 1 : 0, 0.5);
+      this.fighters[1]._classVars.attackOneHitbox.setOrigin(this.fighters[1]._classVars.attackOneHitbox.originX === 0 ? 1 : 0, 0.5);
+    }
+  }
+  checkFighterHit(index, other) {
+
+    
+    if(this.stateMachines[other].state === 'hit') return;
+    const a1Hitbox = this.fighters[index]._classVars.attackOneHitbox;
+    const a1bounds = a1Hitbox.getBounds();
+    const otherBounds = this.fighters[other]._classVars.rect.getBounds();
+    const a1Hit = a1Hitbox.visible && Phaser.Geom.Intersects.RectangleToRectangle(a1bounds, otherBounds) && this.stateMachines[other].state !== 'hit';
+
+    if(a1Hit) {
+      this.stateMachines[other].transition('hit');
     }
   }
 }

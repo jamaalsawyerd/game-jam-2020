@@ -20,16 +20,15 @@ class Fighter extends Phaser.GameObjects.Container {
     });
     this.add(sprite);
 
-    const attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0.5).setOrigin(0, 0.5);
-    scene.physics.add.existing(attackOneHitbox);
-    attackOneHitbox.body.setAllowGravity(false);
+    const attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0).setOrigin(0, 0.5);
     attackOneHitbox.setVisible(false);
-    attackOneHitbox.body.enabled = false;
+    
 
 
     this.add(attackOneHitbox);
     this._classVars = {
       sprite,
+      rect,
       attackOneHitbox,
     };
 
@@ -45,11 +44,8 @@ class Fighter extends Phaser.GameObjects.Container {
     this.playAnim('idle');
     if(facing === 'left') {
       sprite.scaleX *= -1;
-      attackOneHitbox.x = attackOneHitbox.width * -1; 
+      attackOneHitbox.setOrigin(attackOneHitbox.originX === 0 ? 1 : 0, 0.5);
     }
-
-
-
   }
 
   playAnim(key) {

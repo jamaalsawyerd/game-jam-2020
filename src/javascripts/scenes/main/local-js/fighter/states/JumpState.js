@@ -9,7 +9,7 @@ class JumpState extends State {
     const direction = bothDown || noneDown ? undefined : `${left.isDown ? 'left' : 'right'}`;
 
     const { jumpVel } = fighter.config;
-
+    fighter.y -= 500;
     fighter.body.setVelocityY(-jumpVel.y);
 
     if(direction) {

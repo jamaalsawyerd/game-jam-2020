@@ -6,7 +6,6 @@ class AttackOneState extends State {
     fighter.body.setAcceleration(0, 0);
     fighter.playAnim('attack1');
     const { attackOneHitbox} = fighter._classVars;
-    attackOneHitbox.body.enabled = true;
     attackOneHitbox.setVisible(true);
     fighter.setDepth(5);
 
@@ -14,11 +13,10 @@ class AttackOneState extends State {
       this.stateMachine.transition('idle');
       attackOneHitbox.setVisible(false);
       fighter.setDepth(1);
-      fighter._classVars.attackOneHitbox.body.enabled = false;
     });
   }
 
-  execute(scene, params) {
+  execute(scene, stateParams) {
 
   }
 }
