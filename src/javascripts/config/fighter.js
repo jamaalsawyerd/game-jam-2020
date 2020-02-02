@@ -38,7 +38,7 @@ const FighterConfig = {
       right: 'right',
       up: 'up',
       down: 'down',
-      attack1: 'n',
+      attack1: 'period',
       attack2: 'm'
     }
   },
