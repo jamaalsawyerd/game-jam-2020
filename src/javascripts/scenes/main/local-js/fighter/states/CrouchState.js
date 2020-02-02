@@ -10,8 +10,10 @@ class CrouchState extends State {
 
   execute(scene, stateParams) {
     const { controls } = stateParams;
-    const { down } = controls;
-    if(!down.isDown) {
+    const { down, attack1 } = controls;
+    if(Phaser.Input.Keyboard.JustDown(attack1)) {
+      this.stateMachine.transition('attackOne');
+    } else if(!down.isDown) {
       this.stateMachine.transition('idle');
     }
   }

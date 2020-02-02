@@ -9,8 +9,8 @@ class Fighter extends Phaser.GameObjects.Container {
     const width = 90;
     const height = 175;
     this.setSize(width, height);
-    this.defaultColor = params.defaultColor ? params.defaultColor : 0xffffff;
-    const rect = scene.add.rectangle(0, 0, width, height, this.defaultColor);
+    this.defaultColor = params.defaultColor || 0xffffff;
+    const rect = scene.add.rectangle(0, 0, width, height, this.defaultColor, 0.5);
     this.add(rect);
 
     const sprite = scene.add.sprite(0, height / 2, 'doctors', `${config.character}/idle/1.png`);

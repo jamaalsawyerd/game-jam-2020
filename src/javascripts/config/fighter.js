@@ -33,8 +33,8 @@ const FighterConfig = {
       right: 'd',
       up: 'w',
       down: 's',
-      attack1: 'f',
-      attack2: 'g'
+      attack1: 'e',
+      attack2: 'f'
     },
     fighter2: {
       left: 'left',
