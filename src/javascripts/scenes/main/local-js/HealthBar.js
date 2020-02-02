@@ -1,22 +1,22 @@
 class HealthBar extends Phaser.GameObjects.Container {
     constructor (scene, centerX, centerY, params){
         super (scene, centerX, centerY);
-        this.back = scene.add.sprite(0, 0, 'ui_back');
+        this.back = scene.add.sprite(0, 0, 'ui_back').setScale(0.6);
         
-        this.healthLeft = scene.add.sprite(0, 0, 'bar');
+        this.healthLeft = scene.add.sprite(0, 0, 'bar').setScale(0.6);
         this.healthLeft.setOrigin(1, 0.5);
         this.healthLeft.setScrollFactor(1, 0.9);
         
-        this.healthRight = scene.add.sprite(0, 0, 'bar');
+        this.healthRight = scene.add.sprite(0, 0, 'bar').setScale(0.6);
         this.healthRight.setOrigin(0, 0.5);
         this.healthRight.setScrollFactor(1, 0.9);
         
     }
     UpdateUI(x, y){
-        const xoffset = 163;
-        const yoffset = 395;
-        const back_xoffset = 5;
-        const back_yoffset = 400
+        const xoffset = 97;
+        const yoffset = 197;
+        const back_xoffset = 3;
+        const back_yoffset = 200
 
         xleft = x - xoffset;
         xright = x + xoffset;

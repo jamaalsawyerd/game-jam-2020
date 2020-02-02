@@ -9,7 +9,7 @@ class MainSceneController {
     this.floor = this.layers.game.getObject('floor');
     this.ui = this.layers.ui;
     this.cameraController = scene._gameVars.cameraController;
-    this.cameraController.UpdatePosition(this.fighters);
+    this.cameraController.UpdatePosition(this.fighters, this.scene);
     this.cameraController.UpdateWorldBounds(this.scene);
 
   }
@@ -18,7 +18,7 @@ class MainSceneController {
     this.checkFighterPositions();
     this.scene.physics.world.collide(this.fighters, [this.floor, ...this.fighters]);
     this.stateMachines.forEach(sm => sm.step());
-    this.cameraController.UpdatePosition(this.fighters)
+    this.cameraController.UpdatePosition(this.fighters, this.scene)
     this.cameraController.UpdateWorldBounds(this.scene);
     this.ui.onUpdate(this.scene);
   }
