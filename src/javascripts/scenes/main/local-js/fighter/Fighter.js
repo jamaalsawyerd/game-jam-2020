@@ -67,16 +67,14 @@ class Fighter extends Phaser.GameObjects.Container {
     this.scene.tweens.addCounter({
       from: 0,
       to: 1,
-      repeat: 50,
+      repeat: 51,
       duration: 10,
       onRepeat: () => {
-        const { sprite } = this._classVars;
-        sprite.setAlpha(sprite.alpha === 1 ? 0 : 1);
+        this.setAlpha(this.alpha === 1 ? 0 : 1);
       },
       onComplete: () => {
-        const { sprite } = this._classVars;
         this.isInvincible = false;
-        sprite.setAlpha(1);
+        this.setAlpha(1);
       }
     });
   }
