@@ -43,7 +43,7 @@ const FighterConfig = {
       right: 'right',
       up: 'up',
       down: 'down',
-      attack1: 'comma',
+      attack1: 'space',
       attack2: 'period'
     }
   },
