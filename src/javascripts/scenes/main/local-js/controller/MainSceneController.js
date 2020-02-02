@@ -64,8 +64,9 @@ class MainSceneController {
       this.reportHit(this.stateMachines[other].key);
       const fighter = this.fighters[other];
       fighter.health += this.fighters[index].damage;
+      // fighter.health += 100;
       if(fighter.health >= fighter.config.health) {
-        this.endGame(index, other);
+        this.endGame(index);
       }
       console.log(fighter.health);
       console.log(fighter.config.health);
@@ -76,8 +77,12 @@ class MainSceneController {
   reportHit(key) {
     console.log(key);
   }
-  endGame(winner, loser) {
+  endGame(winner) {
+    const { character, key } = this.fighters[winner].config;
     this.gameEnded = true;
+    this.scene.time.delayedCall(1000, () => {
+      this.scene.game.scene.start('game-end', { winner:key, character });
+    });
   }
 }
 
