@@ -16,7 +16,8 @@ class UILayer extends Layer {
     this.cont.add(this.left)
     this.cont.add(this.right)
     this.cont.setScrollFactor(0,0);
-    this.left.setOrigin(1, 0.5);
+    this.left.setOrigin(0, 0.5);
+    this.left.setScale(-1);
     this.right.setOrigin(0, 0.5);
     this.cont.setScale(0.6);
 
@@ -52,7 +53,7 @@ class UILayer extends Layer {
     const x_offset = 160
     this.back.setPosition(4, ytop - y_offset);
     this.right.setPosition(x_offset, ytop)
-    this.left.setPosition(-x_offset, ytop);
+    this.left.setPosition(-x_offset, 0);
     this.back.setRotation(0);
   }
   onUpdate(scene){

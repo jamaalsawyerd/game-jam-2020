@@ -2,7 +2,7 @@ class CameraController {
   constructor(scene) {
     this.scene = scene;
     //set to transparent after debug
-    this._center = scene.add.rectangle(0, 0, 5, 5, 0x000000, 1);
+    this._center = scene.add.rectangle(0, 0, 5, 5, 0x000000, 0);
     scene.cameras.main.startFollow(this._center);
     //TODO reset center to 2000;?
     scene.cameras.main.setBounds(-500, 0, 1975, 500);
