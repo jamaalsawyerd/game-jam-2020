@@ -26,6 +26,8 @@ const FighterConfig = {
     worldBounce: { x: 0, y: 0 },
     bounce: { x: 10000, y: 500 },
     mass: 1,
+    health: 100,
+    damage: 5,
   },
   controlConfig: {
     fighter1: {

@@ -28,7 +28,6 @@ class CameraController {
         this._center.setPosition(newX, newY);
 
 
-
     }
     UpdateWorldBounds(scene){
         const { centerX, centerY, width, height } = scene.cameras.main;

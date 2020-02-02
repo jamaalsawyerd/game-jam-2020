@@ -11,7 +11,7 @@ class UILayer extends Layer {
   onUpdate(scene){
     x = scene.cameras.main.centerX + scene.cameras.main.scrollX;
     y = scene.cameras.main.centerY + scene.cameras.main.scrollY;
-    this.bars.UpdateUI(x, y);
+    //this.bars.UpdateUI(x, y);
   }
 }
 module.exports = UILayer;

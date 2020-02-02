@@ -11,7 +11,7 @@ class MainSceneController {
     this.cameraController = scene._gameVars.cameraController;
     this.cameraController.UpdatePosition(this.fighters, this.scene);
     this.cameraController.UpdateWorldBounds(this.scene);
-
+    this.ui.onUpdate(this.scene);
   }
 
   onUpdate(time, delta) {
@@ -21,7 +21,15 @@ class MainSceneController {
     this.stateMachines.forEach(sm => sm.step());
     this.cameraController.UpdatePosition(this.fighters, this.scene)
     this.cameraController.UpdateWorldBounds(this.scene);
-    this.ui.onUpdate(this.scene);
+    //this.ui.onUpdate(this.scene);
+
+    if (Phaser.Input.Keyboard.JustDown(spacebar)) {
+      console.log("SAPCE")
+      this.takeDamage("fighter1", this.fighters[0], this.fighters[0].damage);
+    }
+    if (Phaser.Input.Keyboard.JustDown(tab)){
+      this.takeDamage("fighter2", this.fighters[1], this.fighters[1].damage);
+    }
   }
 
   checkFighterPositions() {
@@ -39,6 +47,16 @@ class MainSceneController {
       this.fighters[1].facing = facing;
       this.fighters[0].scaleX *= -1;
       this.fighters[1].scaleX *= -1;
+    }
+  }
+  takeDamage(fighterName, fighter, amount){
+    
+    fighter.health -= amount;
+    console.log(fighter.health/fighter.config.health  );
+    if (fighterName == "fighter1"){
+      this.ui.bars.UpdateLeftHealth(fighter.health/fighter.config.health);
+    } else {
+      this.ui.bars.UpdateRightHealth(fighter.health/fighter.config.health);
     }
   }
 }
