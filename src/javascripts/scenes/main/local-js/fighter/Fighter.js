@@ -10,7 +10,7 @@ class Fighter extends Phaser.GameObjects.Container {
     const height = 175;
     this.setSize(width, height);
     this.defaultColor = params.defaultColor || 0xffffff;
-    const rect = scene.add.rectangle(0, 0, width, height, this.defaultColor, 0.5);
+    const rect = scene.add.rectangle(0, 0, width, height, this.defaultColor, 0);
     this.add(rect);
 
     const sprite = scene.add.sprite(0, height / 2, 'doctors', `${config.character}/idle/1.png`);
@@ -18,9 +18,9 @@ class Fighter extends Phaser.GameObjects.Container {
     sprite.on('animationcomplete', (anim, frame) => {
       sprite.emit('animationcomplete_' + anim.key, anim, frame);
     });
-    this.add(sprite);    
+    this.add(sprite);
 
-    
+
     this._classVars = {
       sprite,
     };
@@ -36,7 +36,7 @@ class Fighter extends Phaser.GameObjects.Container {
     scene.add.existing(this);
     this.playAnim('idle');
     if(facing === 'left') {
-      this.scaleX = -1;
+      sprite.scaleX *= -1;
     }
 
   }

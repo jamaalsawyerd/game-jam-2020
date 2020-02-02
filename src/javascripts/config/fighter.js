@@ -24,7 +24,7 @@ const FighterConfig = {
     friction: { x: 1000, y: 100 },
     drag: { x: 1000, y: 0 },
     worldBounce: { x: 0, y: 0 },
-    bounce: { x: 10000, y: 500 },
+    bounce: { x: 1, y: 1 },
     mass: 1,
   },
   controlConfig: {
