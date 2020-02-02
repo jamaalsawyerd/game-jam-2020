@@ -1,18 +1,29 @@
 class HealthBar extends Phaser.GameObjects.Container {
     constructor (scene, centerX, centerY, params){
         super (scene, centerX, centerY);
-        this.back = scene.add.sprite(0, 0, 'ui_back').setScale(0.6);
-        this.back.setScrollFactor(0,0);
+        scene.add.container(this)
+        this.back = scene.add.sprite(0, 0, 'ui_back')//.setScale(0.6);
+        // this.back.setScrollFactor(0,0);
         
-        this.healthLeft = scene.add.tileSprite(0, 0, 0,0,'bar').setScale(0.6);
-        this.healthLeft.setOrigin(1, 0.5);
-        this.healthLeft.setScrollFactor(0, 0);
+        this.healthLeft = scene.add.tileSprite(0, 0, 0,0,'bar')//.setScale(0.6);
+        // this.healthLeft.setOrigin(1, 0.5);
+        // this.healthLeft.setScrollFactor(0, 0);
         this.barMax = this.healthLeft.width;
         
-        this.healthRight = scene.add.tileSprite(0, 0, 0,0,'bar').setScale(0.6);
-        this.healthRight.setOrigin(0, 0.5);
-        this.healthRight.setScrollFactor(0, 0);
-        
+        this.healthRight = scene.add.tileSprite(0, 0, 0,0,'bar')//.setScale(0.6);
+        // this.healthRight.setOrigin(0, 0.5);
+        // this.healthRight.setScrollFactor(0, 0);
+
+        this.width = this.back.width;
+        this.height = this.back.height;
+        //scene.cameras.main.zoom = 0.1;
+        console.log(this.x);
+        this.add(this.back)
+        this.add(this.healthLeft)
+        this.add(this.healthRight)
+    }
+
+    SetScale(scale){
     }
     UpdateUI(x, y){
         const xoffset = 97;
@@ -24,9 +35,10 @@ class HealthBar extends Phaser.GameObjects.Container {
         xright = x + xoffset;
         ycenter = y - yoffset;
 
-        this.healthLeft.setPosition(xleft, ycenter);
-        this.healthRight.setPosition(xright, ycenter);
-        this.back.setPosition(x + back_xoffset, y - back_yoffset);
+    
+        // this.healthLeft.setPosition(xleft, ycenter);
+        // this.healthRight.setPosition(xright, ycenter);
+        // this.back.setPosition(x + back_xoffset, y - back_yoffset);
     }    
     UpdateLeftHealth(leftpercent){ //percentage between 0 - 1
         //this.healthLeft.scaleX = leftpercent;

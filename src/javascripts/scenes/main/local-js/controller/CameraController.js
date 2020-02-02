@@ -10,9 +10,6 @@ class CameraController {
 
     }
     UpdatePosition(fighters, scene){
-        const maxCameraSize = {x: 1980, y:1080 }
-        const minCameraSize = {x: 960, y: 540 }
-        const maxDist = 800;
         
         x = 0;
         y = 0;
@@ -20,9 +17,9 @@ class CameraController {
             x += fighters[i].x;
             y += fighters[i].y;
         }
-        x /= 2
-        y /= 2
-        distance = Math.abs(fighters[0].x - fighters[1].x)
+        x /= fighters.length
+        y /= fighters.length
+
         newX = this.lerp(this._center.x, x, 0.5);
         newY = this.lerp(this._center.y, y, 0.5);
         this._center.setPosition(newX, newY);

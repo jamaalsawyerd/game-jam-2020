@@ -25,11 +25,12 @@ class MainSceneController {
     //this.ui.onUpdate(this.scene);
 
     if (Phaser.Input.Keyboard.JustDown(spacebar)) {
-      console.log("SAPCE")
-      this.takeDamage("fighter1", this.fighters[0], this.fighters[0].damage);
+      //this.takeDamage("fighter1", this.fighters[0], this.fighters[0].damage);
+      this.ui.Shake()
     }
     if (Phaser.Input.Keyboard.JustDown(tab)){
-      this.takeDamage("fighter2", this.fighters[1], this.fighters[1].damage);
+      //this.takeDamage("fighter2", this.fighters[1], this.fighters[1].damage);
+      this.ui.Unshake();
     }
   }
 
@@ -47,19 +48,14 @@ class MainSceneController {
     if(facing !== side) {
       this.fighters[0].facing = this.fighters[1].facing;
       this.fighters[1].facing = facing;
-      this.fighters[0]._classVars.sprite.scaleX *= -1;
+      this.fighters[0]._classVars.sprite.scaleX *= -1; 
       this.fighters[1]._classVars.sprite.scaleX *= -1;
     }
   }
   takeDamage(fighterName, fighter, amount){
     
     fighter.health -= amount;
-    console.log(fighter.health/fighter.config.health  );
-    if (fighterName == "fighter1"){
-      this.ui.bars.UpdateLeftHealth(fighter.health/fighter.config.health);
-    } else {
-      this.ui.bars.UpdateRightHealth(fighter.health/fighter.config.health);
-    }
+    this.ui.UpdateBar(fighterName, fighter.health/fighter.config.health);
   }
 }
 
