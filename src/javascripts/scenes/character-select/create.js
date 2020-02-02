@@ -1,6 +1,14 @@
 
 const create = function() {
   console.log('create');
+  const music = this.sound.add('music', {
+    loop:true,
+    volume: 0.5,
+  }).play();
+
+  const clickFX = this.sound.add('click', {
+    volume: 1,
+  });
 
   const { centerX, centerY, width, height } = this.cameras.main;
   this.playerSelect = {
@@ -30,6 +38,7 @@ const create = function() {
   const lock2 = this.add.image(selectEye.x + 75, selectEye.y - 95, 'lock').setScale(0.33).setTint(0x000000);
 
   const onClick = (select) => {
+    clickFX.play();
     this.playerSelect[`player${this.selectIndex}`] = select;
     this.selectIndex++;
     if(this.selectIndex > 2) {
