@@ -77,6 +77,7 @@ class MainSceneController {
       }
       console.log(fighter.health);
       console.log(fighter.config.health);
+      this.layers.ui.Shake();
       this.layers.ui.UpdateBar(this.stateMachines[other].key, fighter.health / fighter.config.health);
     }
   }

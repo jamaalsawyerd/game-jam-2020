@@ -7,7 +7,7 @@ const CameraController = require('./local-js/controller/CameraController');
 const create = function() {
   console.log('create');
 
-  this.cameras.main.setBackgroundColor('#ffb6c1');
+  this.cameras.main.setBackgroundColor('#000000');
   this._gameVars = {};
   const phaserGroupManager = new PhaserGroupManager(this);
   this._gameVars.phaserGroupManager = phaserGroupManager;

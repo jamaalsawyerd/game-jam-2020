@@ -21,10 +21,12 @@ class UILayer extends Layer {
     this.right.setOrigin(0, 0.5);
     this.cont.setScale(0.6);
 
-    this.Unshake();
     this.max_width = this.left.width;
     this.left.width = 0;
     this.right.width = 0;
+    this.group.add(this.cont);
+    this.group.setDepth(10);
+
   }
 
   SetUIScale(scale) {
@@ -40,22 +42,9 @@ class UILayer extends Layer {
   }
 
   Shake() {
-    const rot = Phaser.Math.RND.between(0, 0.01);
-    this.back.setRotation(rot);
-    let perterb = Phaser.Math.RND.between(-5, 5);
-    this.left.setPosition(this.left.x, this.left.y + perterb);
-    perterb = Phaser.Math.RND.between(-5, 5);
-    this.right.setPosition(this.right.x, this.right.y + perterb);
+    this.scene.cameras.main.shake(500, 0.02);
   }
-  Unshake() {
-    const ytop = 0;
-    const y_offset = 5;
-    const x_offset = 160;
-    this.back.setPosition(4, ytop - y_offset);
-    this.right.setPosition(x_offset, ytop);
-    this.left.setPosition(-x_offset, 0);
-    this.back.setRotation(0);
-  }
+
   onUpdate(scene) {
     const x = scene.cameras.main.centerX + scene.cameras.main.scrollX;
     const y = scene.cameras.main.centerY + scene.cameras.main.scrollY;
