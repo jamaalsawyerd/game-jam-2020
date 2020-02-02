@@ -5,7 +5,7 @@ const scene = {
   create,
   preload,
   update,
-  key: 'main',
+  key: 'intro',
   active: true,
 };
 
