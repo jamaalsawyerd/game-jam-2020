@@ -1,6 +1,6 @@
 const preload = function() {
   console.log('preload');
-  this.load.image('mainBackground', 'images/main_back.png');
+  this.load.image('csBackground', 'images/main_back.png');
   this.load.image('select_sleep', 'images/select_sleep.png');
   this.load.image('select_blood', 'images/select_blood.png');
   this.load.image('select_foot', 'images/select_foot.png');

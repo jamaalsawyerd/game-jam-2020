@@ -57,6 +57,14 @@ const FighterConfig = {
         start:1
       },
       {
+        key: 'win',
+        start:1
+      },
+      {
+        key: 'lose',
+        start:1
+      },
+      {
         key: 'idle',
         start: 1,
         end: 8,
@@ -98,6 +106,14 @@ const FighterConfig = {
       },
       {
         key: 'hit',
+        start:1
+      },
+      {
+        key: 'win',
+        start:1
+      },
+      {
+        key: 'lose',
         start:1
       },
       {

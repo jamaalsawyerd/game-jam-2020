@@ -9,7 +9,7 @@ const create = function() {
   };
   this.selectIndex = 1;
 
-  this.add.image(centerX, centerY, 'mainBackground');
+  this.add.image(centerX, centerY, 'csBackground');
   this.add.rectangle(0, 0, width, height, 0x000000, 0.5).setOrigin(0);
   const selectText = this.add.image(centerX, 0, 'select_text_1').setOrigin(0.5, 0).setScale(0.5);
   const selectOffsetX = 210;
