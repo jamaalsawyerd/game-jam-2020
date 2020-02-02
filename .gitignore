@@ -9,7 +9,7 @@ package-lock.json
 dist
 npm-debug.log
 build/*
-
 transfer/*
 # Misc
 .bak
+/dist.zip
