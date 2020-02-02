@@ -18,6 +18,9 @@ const create = function() {
   this._gameVars.cameraController = new CameraController(this);
   this._gameVars.controller = new MainSceneController(this);
   this.controller = this._gameVars.controller;
+
+  spacebar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
+  tab = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.TAB);
 };
 
 

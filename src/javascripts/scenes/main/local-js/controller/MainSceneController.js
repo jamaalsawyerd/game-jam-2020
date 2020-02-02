@@ -7,12 +7,11 @@ class MainSceneController {
     this.stateMachines = this.layers.game.getObject('stateMachines');
     this.fighters = this.stateMachines.map(s => s.stateParams.fighter);
     this.floor = this.layers.game.getObject('floor');
-    this.ui = this.layers.ui;
     this.cameraController = scene._gameVars.cameraController;
     this.cameraController.UpdatePosition(this.fighters, this.scene);
-    // this.cameraController.UpdateWorldBounds(this.scene);
-    this.ui.onUpdate(this.scene);
     this.skipFrames = 60;
+    this.debugKey1 = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE);
+    this.debugKey2 = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.TWO);
   }
 
   onUpdate(time, delta) {
@@ -30,15 +29,14 @@ class MainSceneController {
       this.cameraController.UpdateWorldBounds(this.scene);
     }
 
-    //this.ui.onUpdate(this.scene);
 
-    if(Phaser.Input.Keyboard.JustDown(spacebar)) {
+    if(Phaser.Input.Keyboard.JustDown(this.debugKey1)) {
       //this.takeDamage("fighter1", this.fighters[0], this.fighters[0].damage);
-      this.ui.Shake();
+      this.layers.ui.Shake();
     }
-    if(Phaser.Input.Keyboard.JustDown(tab)) {
+    if(Phaser.Input.Keyboard.JustDown(this.debugKey2)) {
       //this.takeDamage("fighter2", this.fighters[1], this.fighters[1].damage);
-      this.ui.Unshake();
+      this.layers.ui.Unshake();
     }
   }
 
@@ -79,7 +77,7 @@ class MainSceneController {
       }
       console.log(fighter.health);
       console.log(fighter.config.health);
-      this.ui.UpdateBar(this.stateMachines[other].key, fighter.health / fighter.config.health);
+      this.layers.ui.UpdateBar(this.stateMachines[other].key, fighter.health / fighter.config.health);
     }
   }
   reportHit(key) {
