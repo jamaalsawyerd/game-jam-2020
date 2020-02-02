@@ -1,7 +1,6 @@
 const Layer = require('../../../../shared/layer/generic');
-const HealthBar = require('../HealthBar');
 class UILayer extends Layer {
-  constructor(group, scene) {
+  constructor(group, scene, data) {
     super(group, scene);
     const { centerX, centerY, width, height } = scene.cameras.main;
     const x = scene.cameras.main.centerX + scene.cameras.main.scrollX;
@@ -24,11 +23,24 @@ class UILayer extends Layer {
     this.right.setPosition(162, 1);
     this.back.setPosition(4, -5);
 
+    console.log(data);
+    const portrait1 = scene.add.image(-800, 0, `p_${data.player1}`);
+    const portrait2 = scene.add.image(800, 0, `p_${data.player2}`);
+    this.cont.add(portrait1);
+    this.cont.add(portrait2);
+
+    if(data.player1 === data.player2) {
+      portrait2.setPipeline('colorpipe');
+    }
     this.max_width = this.left.width;
     this.left.width = 0;
     this.right.width = 0;
     this.group.add(this.cont);
     this.group.setDepth(10);
+
+    
+
+    
 
   }
 
@@ -45,9 +57,6 @@ class UILayer extends Layer {
   }
 
   onUpdate(scene) {
-    const x = scene.cameras.main.centerX + scene.cameras.main.scrollX;
-    const y = scene.cameras.main.centerY + scene.cameras.main.scrollY;
-    //this.bars.UpdateUI(x, y);
   }
 }
 module.exports = UILayer;

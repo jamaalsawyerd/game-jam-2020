@@ -5,6 +5,8 @@ const preload = function() {
   this.load.image('ui_back', 'images/topui.png');
   this.load.image('bar', 'images/fillbar.png');
   this.load.image('cross', 'images/cross.png');
+  this.load.image('p_blood', 'images/portrait_blood.png');
+  this.load.image('p_foot', 'images/portrait_foot.png');
   
 };
 

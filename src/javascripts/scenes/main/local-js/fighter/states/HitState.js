@@ -9,11 +9,11 @@ class HitState extends State {
     fighter.body.setVelocityY(-jumpVel.y);
 
     const velX = facingLeft ? jumpVel.x * 2 : -jumpVel.x * 2;
-    
+
     fighter.body.setVelocityX(velX);
     fighter.body.setVelocityY(-jumpVel.y);
     fighter.body.setMaxVelocity(jumpMaxVel.x * 2, jumpMaxVel.y);
- 
+
     fighter.playAnim('hit');
     const { attackOneHitbox } = fighter._classVars;
     attackOneHitbox.setVisible(false);

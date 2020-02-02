@@ -5,12 +5,6 @@ const FighterConfig = require('../../../../config/fighter');
 
 class GameLayer extends Layer {
   constructor(group, scene, data) {
-    if(!data.player1) {
-      data = {
-        player1: 'blood',
-        player2: 'foot',
-      };
-    }
     super(group, scene);
     this;
     //get camera vars

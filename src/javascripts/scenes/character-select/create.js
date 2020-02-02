@@ -9,8 +9,12 @@ const create = function() {
   };
   this.selectIndex = 1;
 
-  this.add.image(centerX, centerY, 'mainBackground');
-  this.add.rectangle(0, 0, width, height, 0x000000, 0.5).setOrigin(0);
+  this.add.image(centerX, centerY, 'csBackground');
+  const rect = this.add.rectangle(0, 0, width, height, 0x000000, 0.5).setOrigin(0);
+
+  const selContainer = this.add.container(0, 0);
+
+
   const selectText = this.add.image(centerX, 0, 'select_text_1').setOrigin(0.5, 0).setScale(0.5);
   const selectOffsetX = 210;
   const startX = 160;
@@ -22,8 +26,8 @@ const create = function() {
   pipeline.setSatAdjust(0);
   selectEye.setPipeline('cs_colorpipe');
   selectSleep.setPipeline('cs_colorpipe');
-  this.add.image(selectSleep.x + 75, selectSleep.y - 95, 'lock').setScale(0.33).setTint(0x000000);
-  this.add.image(selectEye.x + 75, selectEye.y - 95, 'lock').setScale(0.33).setTint(0x000000);
+  const lock1 = this.add.image(selectSleep.x + 75, selectSleep.y - 95, 'lock').setScale(0.33).setTint(0x000000);
+  const lock2 = this.add.image(selectEye.x + 75, selectEye.y - 95, 'lock').setScale(0.33).setTint(0x000000);
 
   const onClick = (select) => {
     this.playerSelect[`player${this.selectIndex}`] = select;
@@ -44,6 +48,32 @@ const create = function() {
   selectFoot.setInteractive({ useHandCursor: true }).on('pointerdown', () => {
     onClick('foot');
   });
+
+  selContainer.add([
+    selectText,
+    selectBlood,
+    selectFoot,
+    selectSleep,
+    selectEye,
+    lock1,
+    lock2,
+  ]);
+
+  selContainer.setVisible(false);
+
+  const introContainer = this.add.container(0, 0);
+  const logo = this.add.image(centerX, 125, 'csLogo').setScale(0.5);
+  const chars = this.add.image(centerX, height - 150, 'csChars').setScale(0.6);
+  introContainer.add([
+    logo,
+    chars
+  ]);
+
+  this.time.delayedCall(2000, () => {
+    introContainer.setVisible(false);
+    selContainer.setVisible(true);
+  });
+
 
 };
 

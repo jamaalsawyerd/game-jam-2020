@@ -4,13 +4,55 @@
 			"image": "doctors.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 3049,
-				"h": 2014
+				"w": 2024,
+				"h": 3425
 			},
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "blood/jump/1.png",
+					"filename": "foot/crouch/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 22,
+						"y": 241,
+						"w": 365,
+						"h": 269
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 365,
+						"h": 269
+					}
+				},
+				{
+					"filename": "foot/win/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 444,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 199,
+						"w": 442,
+						"h": 311
+					},
+					"frame": {
+						"x": 368,
+						"y": 1,
+						"w": 442,
+						"h": 311
+					}
+				},
+				{
+					"filename": "blood/crouch/1.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -18,184 +60,16 @@
 						"h": 633
 					},
 					"spriteSourceSize": {
-						"x": 92,
-						"y": 21,
-						"w": 458,
-						"h": 603
+						"x": 134,
+						"y": 303,
+						"w": 373,
+						"h": 330
 					},
 					"frame": {
-						"x": 1,
+						"x": 812,
 						"y": 1,
-						"w": 458,
-						"h": 603
-					}
-				},
-				{
-					"filename": "blood/attack1/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 205,
-						"w": 611,
-						"h": 428
-					},
-					"frame": {
-						"x": 461,
-						"y": 1,
-						"w": 611,
-						"h": 428
-					}
-				},
-				{
-					"filename": "foot/jump/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 17,
-						"y": 0,
-						"w": 370,
-						"h": 510
-					},
-					"frame": {
-						"x": 1,
-						"y": 606,
-						"w": 370,
-						"h": 510
-					}
-				},
-				{
-					"filename": "blood/hit/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 104,
-						"y": 133,
-						"w": 345,
-						"h": 496
-					},
-					"frame": {
-						"x": 1,
-						"y": 1118,
-						"w": 345,
-						"h": 496
-					}
-				},
-				{
-					"filename": "foot/idle/2.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 113,
-						"w": 274,
-						"h": 397
-					},
-					"frame": {
-						"x": 1,
-						"y": 1616,
-						"w": 274,
-						"h": 397
-					}
-				},
-				{
-					"filename": "foot/attack1/2.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 138,
-						"w": 395,
-						"h": 372
-					},
-					"frame": {
-						"x": 1074,
-						"y": 1,
-						"w": 395,
-						"h": 372
-					}
-				},
-				{
-					"filename": "foot/attack1/3.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 138,
-						"w": 395,
-						"h": 372
-					},
-					"frame": {
-						"x": 1471,
-						"y": 1,
-						"w": 395,
-						"h": 372
-					}
-				},
-				{
-					"filename": "foot/attack1/5.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 138,
-						"w": 395,
-						"h": 372
-					},
-					"frame": {
-						"x": 1868,
-						"y": 1,
-						"w": 395,
-						"h": 372
-					}
-				},
-				{
-					"filename": "foot/attack1/6.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 138,
-						"w": 395,
-						"h": 372
-					},
-					"frame": {
-						"x": 2265,
-						"y": 1,
-						"w": 395,
-						"h": 372
+						"w": 373,
+						"h": 330
 					}
 				},
 				{
@@ -213,7 +87,7 @@
 						"h": 372
 					},
 					"frame": {
-						"x": 2662,
+						"x": 1187,
 						"y": 1,
 						"w": 386,
 						"h": 372
@@ -234,14 +108,14 @@
 						"h": 372
 					},
 					"frame": {
-						"x": 2662,
+						"x": 1187,
 						"y": 1,
 						"w": 386,
 						"h": 372
 					}
 				},
 				{
-					"filename": "foot/idle/8.png",
+					"filename": "foot/attack1/2.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -249,16 +123,58 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 73,
-						"y": 113,
-						"w": 274,
-						"h": 397
+						"x": 2,
+						"y": 138,
+						"w": 395,
+						"h": 372
 					},
 					"frame": {
-						"x": 277,
-						"y": 1616,
-						"w": 274,
-						"h": 397
+						"x": 1575,
+						"y": 1,
+						"w": 395,
+						"h": 372
+					}
+				},
+				{
+					"filename": "blood/idle/5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 254,
+						"w": 284,
+						"h": 379
+					},
+					"frame": {
+						"x": 1,
+						"y": 272,
+						"w": 284,
+						"h": 379
+					}
+				},
+				{
+					"filename": "foot/attack1/3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 138,
+						"w": 395,
+						"h": 372
+					},
+					"frame": {
+						"x": 287,
+						"y": 314,
+						"w": 395,
+						"h": 372
 					}
 				},
 				{
@@ -276,77 +192,14 @@
 						"h": 372
 					},
 					"frame": {
-						"x": 461,
-						"y": 431,
+						"x": 684,
+						"y": 333,
 						"w": 390,
 						"h": 372
 					}
 				},
 				{
-					"filename": "blood/crouch/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 134,
-						"y": 303,
-						"w": 373,
-						"h": 330
-					},
-					"frame": {
-						"x": 373,
-						"y": 805,
-						"w": 373,
-						"h": 330
-					}
-				},
-				{
-					"filename": "blood/move/3.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 180,
-						"w": 255,
-						"h": 453
-					},
-					"frame": {
-						"x": 348,
-						"y": 1137,
-						"w": 255,
-						"h": 453
-					}
-				},
-				{
-					"filename": "blood/move/7.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 180,
-						"w": 255,
-						"h": 453
-					},
-					"frame": {
-						"x": 605,
-						"y": 1137,
-						"w": 255,
-						"h": 453
-					}
-				},
-				{
-					"filename": "foot/idle/1.png",
+					"filename": "foot/attack1/5.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -354,457 +207,37 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 73,
-						"y": 108,
-						"w": 274,
-						"h": 402
+						"x": 2,
+						"y": 138,
+						"w": 395,
+						"h": 372
 					},
 					"frame": {
-						"x": 553,
-						"y": 1592,
-						"w": 274,
-						"h": 402
-					}
-				},
-				{
-					"filename": "foot/idle/9.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 108,
-						"w": 274,
-						"h": 402
-					},
-					"frame": {
-						"x": 553,
-						"y": 1592,
-						"w": 274,
-						"h": 402
-					}
-				},
-				{
-					"filename": "blood/idle/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 168,
-						"y": 245,
-						"w": 284,
-						"h": 388
-					},
-					"frame": {
-						"x": 853,
-						"y": 431,
-						"w": 284,
-						"h": 388
-					}
-				},
-				{
-					"filename": "blood/move/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 188,
-						"w": 255,
-						"h": 445
-					},
-					"frame": {
-						"x": 1139,
+						"x": 1076,
 						"y": 375,
-						"w": 255,
-						"h": 445
+						"w": 395,
+						"h": 372
 					}
 				},
 				{
-					"filename": "blood/move/2.png",
+					"filename": "foot/attack1/6.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 611,
-						"h": 633
+						"w": 402,
+						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 200,
-						"y": 184,
-						"w": 255,
-						"h": 449
+						"x": 2,
+						"y": 138,
+						"w": 395,
+						"h": 372
 					},
 					"frame": {
-						"x": 1396,
+						"x": 1473,
 						"y": 375,
-						"w": 255,
-						"h": 449
-					}
-				},
-				{
-					"filename": "blood/move/8.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 184,
-						"w": 255,
-						"h": 449
-					},
-					"frame": {
-						"x": 1653,
-						"y": 375,
-						"w": 255,
-						"h": 449
-					}
-				},
-				{
-					"filename": "blood/move/6.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 184,
-						"w": 255,
-						"h": 448
-					},
-					"frame": {
-						"x": 1910,
-						"y": 375,
-						"w": 255,
-						"h": 448
-					}
-				},
-				{
-					"filename": "blood/move/4.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 184,
-						"w": 255,
-						"h": 447
-					},
-					"frame": {
-						"x": 2167,
-						"y": 375,
-						"w": 255,
-						"h": 447
-					}
-				},
-				{
-					"filename": "blood/move/5.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 200,
-						"y": 188,
-						"w": 255,
-						"h": 441
-					},
-					"frame": {
-						"x": 2424,
-						"y": 375,
-						"w": 255,
-						"h": 441
-					}
-				},
-				{
-					"filename": "foot/hit/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 81,
-						"y": 61,
-						"w": 243,
-						"h": 449
-					},
-					"frame": {
-						"x": 2681,
-						"y": 375,
-						"w": 243,
-						"h": 449
-					}
-				},
-				{
-					"filename": "foot/crouch/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 22,
-						"y": 241,
-						"w": 365,
-						"h": 269
-					},
-					"frame": {
-						"x": 748,
-						"y": 821,
-						"w": 365,
-						"h": 269
-					}
-				},
-				{
-					"filename": "foot/move/1.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 68,
-						"y": 102,
-						"w": 255,
-						"h": 407
-					},
-					"frame": {
-						"x": 862,
-						"y": 1092,
-						"w": 255,
-						"h": 407
-					}
-				},
-				{
-					"filename": "foot/move/2.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 68,
-						"y": 107,
-						"w": 255,
-						"h": 402
-					},
-					"frame": {
-						"x": 829,
-						"y": 1592,
-						"w": 255,
-						"h": 402
-					}
-				},
-				{
-					"filename": "foot/idle/3.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 117,
-						"w": 274,
-						"h": 393
-					},
-					"frame": {
-						"x": 1119,
-						"y": 822,
-						"w": 274,
-						"h": 393
-					}
-				},
-				{
-					"filename": "blood/idle/2.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 168,
-						"y": 247,
-						"w": 284,
-						"h": 386
-					},
-					"frame": {
-						"x": 1395,
-						"y": 826,
-						"w": 284,
-						"h": 386
-					}
-				},
-				{
-					"filename": "blood/idle/8.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 168,
-						"y": 247,
-						"w": 284,
-						"h": 386
-					},
-					"frame": {
-						"x": 1681,
-						"y": 826,
-						"w": 284,
-						"h": 386
-					}
-				},
-				{
-					"filename": "foot/idle/4.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 122,
-						"w": 274,
-						"h": 388
-					},
-					"frame": {
-						"x": 1967,
-						"y": 825,
-						"w": 274,
-						"h": 388
-					}
-				},
-				{
-					"filename": "foot/idle/7.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 117,
-						"w": 274,
-						"h": 393
-					},
-					"frame": {
-						"x": 2243,
-						"y": 824,
-						"w": 274,
-						"h": 393
-					}
-				},
-				{
-					"filename": "blood/idle/3.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 168,
-						"y": 250,
-						"w": 284,
-						"h": 383
-					},
-					"frame": {
-						"x": 1119,
-						"y": 1217,
-						"w": 284,
-						"h": 383
-					}
-				},
-				{
-					"filename": "blood/idle/7.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 611,
-						"h": 633
-					},
-					"spriteSourceSize": {
-						"x": 168,
-						"y": 250,
-						"w": 284,
-						"h": 383
-					},
-					"frame": {
-						"x": 1405,
-						"y": 1214,
-						"w": 284,
-						"h": 383
-					}
-				},
-				{
-					"filename": "foot/idle/5.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 126,
-						"w": 274,
-						"h": 384
-					},
-					"frame": {
-						"x": 1691,
-						"y": 1214,
-						"w": 274,
-						"h": 384
-					}
-				},
-				{
-					"filename": "foot/idle/6.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 73,
-						"y": 122,
-						"w": 274,
-						"h": 388
-					},
-					"frame": {
-						"x": 1967,
-						"y": 1215,
-						"w": 274,
-						"h": 388
+						"w": 395,
+						"h": 372
 					}
 				},
 				{
@@ -822,8 +255,8 @@
 						"h": 381
 					},
 					"frame": {
-						"x": 2243,
-						"y": 1219,
+						"x": 1,
+						"y": 653,
 						"w": 284,
 						"h": 381
 					}
@@ -843,14 +276,14 @@
 						"h": 381
 					},
 					"frame": {
-						"x": 1086,
-						"y": 1602,
+						"x": 287,
+						"y": 688,
 						"w": 284,
 						"h": 381
 					}
 				},
 				{
-					"filename": "blood/idle/5.png",
+					"filename": "blood/idle/3.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -859,19 +292,40 @@
 					},
 					"spriteSourceSize": {
 						"x": 168,
-						"y": 254,
+						"y": 250,
 						"w": 284,
-						"h": 379
+						"h": 383
 					},
 					"frame": {
-						"x": 2519,
-						"y": 826,
+						"x": 573,
+						"y": 707,
 						"w": 284,
-						"h": 379
+						"h": 383
 					}
 				},
 				{
-					"filename": "foot/move/3.png",
+					"filename": "blood/idle/7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 250,
+						"w": 284,
+						"h": 383
+					},
+					"frame": {
+						"x": 859,
+						"y": 749,
+						"w": 284,
+						"h": 383
+					}
+				},
+				{
+					"filename": "foot/idle/5.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -879,20 +333,83 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 68,
-						"y": 112,
-						"w": 255,
-						"h": 397
+						"x": 73,
+						"y": 126,
+						"w": 274,
+						"h": 384
 					},
 					"frame": {
-						"x": 2529,
-						"y": 1207,
-						"w": 255,
-						"h": 397
+						"x": 1145,
+						"y": 749,
+						"w": 274,
+						"h": 384
 					}
 				},
 				{
-					"filename": "foot/move/4.png",
+					"filename": "blood/idle/2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 247,
+						"w": 284,
+						"h": 386
+					},
+					"frame": {
+						"x": 1421,
+						"y": 749,
+						"w": 284,
+						"h": 386
+					}
+				},
+				{
+					"filename": "blood/idle/8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 247,
+						"w": 284,
+						"h": 386
+					},
+					"frame": {
+						"x": 1707,
+						"y": 749,
+						"w": 284,
+						"h": 386
+					}
+				},
+				{
+					"filename": "blood/idle/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 245,
+						"w": 284,
+						"h": 388
+					},
+					"frame": {
+						"x": 1,
+						"y": 1036,
+						"w": 284,
+						"h": 388
+					}
+				},
+				{
+					"filename": "foot/idle/4.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -900,20 +417,20 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 68,
-						"y": 107,
-						"w": 255,
-						"h": 400
+						"x": 73,
+						"y": 122,
+						"w": 274,
+						"h": 388
 					},
 					"frame": {
-						"x": 2786,
-						"y": 1207,
-						"w": 255,
-						"h": 400
+						"x": 287,
+						"y": 1071,
+						"w": 274,
+						"h": 388
 					}
 				},
 				{
-					"filename": "foot/move/9.png",
+					"filename": "foot/idle/6.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -921,20 +438,20 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 68,
-						"y": 102,
-						"w": 255,
-						"h": 404
+						"x": 73,
+						"y": 122,
+						"w": 274,
+						"h": 388
 					},
 					"frame": {
-						"x": 1372,
-						"y": 1609,
-						"w": 255,
-						"h": 404
+						"x": 563,
+						"y": 1092,
+						"w": 274,
+						"h": 388
 					}
 				},
 				{
-					"filename": "foot/move/5.png",
+					"filename": "foot/idle/3.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -942,20 +459,20 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 68,
-						"y": 102,
-						"w": 255,
-						"h": 402
+						"x": 73,
+						"y": 117,
+						"w": 274,
+						"h": 393
 					},
 					"frame": {
-						"x": 1629,
-						"y": 1600,
-						"w": 255,
-						"h": 402
+						"x": 839,
+						"y": 1134,
+						"w": 274,
+						"h": 393
 					}
 				},
 				{
-					"filename": "foot/move/6.png",
+					"filename": "foot/idle/7.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -963,37 +480,16 @@
 						"h": 510
 					},
 					"spriteSourceSize": {
-						"x": 68,
-						"y": 108,
-						"w": 255,
-						"h": 399
+						"x": 73,
+						"y": 117,
+						"w": 274,
+						"h": 393
 					},
 					"frame": {
-						"x": 1886,
-						"y": 1605,
-						"w": 255,
-						"h": 399
-					}
-				},
-				{
-					"filename": "foot/move/8.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 402,
-						"h": 510
-					},
-					"spriteSourceSize": {
-						"x": 68,
-						"y": 108,
-						"w": 255,
-						"h": 398
-					},
-					"frame": {
-						"x": 2143,
-						"y": 1605,
-						"w": 255,
-						"h": 398
+						"x": 1115,
+						"y": 1135,
+						"w": 274,
+						"h": 393
 					}
 				},
 				{
@@ -1011,10 +507,598 @@
 						"h": 393
 					},
 					"frame": {
-						"x": 2400,
-						"y": 1606,
+						"x": 1391,
+						"y": 1137,
 						"w": 255,
 						"h": 393
+					}
+				},
+				{
+					"filename": "foot/idle/2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 113,
+						"w": 274,
+						"h": 397
+					},
+					"frame": {
+						"x": 1648,
+						"y": 1137,
+						"w": 274,
+						"h": 397
+					}
+				},
+				{
+					"filename": "foot/idle/8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 113,
+						"w": 274,
+						"h": 397
+					},
+					"frame": {
+						"x": 1,
+						"y": 1426,
+						"w": 274,
+						"h": 397
+					}
+				},
+				{
+					"filename": "foot/move/3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 112,
+						"w": 255,
+						"h": 397
+					},
+					"frame": {
+						"x": 277,
+						"y": 1461,
+						"w": 255,
+						"h": 397
+					}
+				},
+				{
+					"filename": "foot/move/8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 108,
+						"w": 255,
+						"h": 398
+					},
+					"frame": {
+						"x": 534,
+						"y": 1482,
+						"w": 255,
+						"h": 398
+					}
+				},
+				{
+					"filename": "foot/move/6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 108,
+						"w": 255,
+						"h": 399
+					},
+					"frame": {
+						"x": 791,
+						"y": 1529,
+						"w": 255,
+						"h": 399
+					}
+				},
+				{
+					"filename": "foot/move/4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 107,
+						"w": 255,
+						"h": 400
+					},
+					"frame": {
+						"x": 1048,
+						"y": 1530,
+						"w": 255,
+						"h": 400
+					}
+				},
+				{
+					"filename": "blood/lose/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 153,
+						"y": 232,
+						"w": 295,
+						"h": 401
+					},
+					"frame": {
+						"x": 1305,
+						"y": 1532,
+						"w": 295,
+						"h": 401
+					}
+				},
+				{
+					"filename": "foot/idle/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 108,
+						"w": 274,
+						"h": 402
+					},
+					"frame": {
+						"x": 1602,
+						"y": 1536,
+						"w": 274,
+						"h": 402
+					}
+				},
+				{
+					"filename": "foot/idle/9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 73,
+						"y": 108,
+						"w": 274,
+						"h": 402
+					},
+					"frame": {
+						"x": 1602,
+						"y": 1536,
+						"w": 274,
+						"h": 402
+					}
+				},
+				{
+					"filename": "foot/move/2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 107,
+						"w": 255,
+						"h": 402
+					},
+					"frame": {
+						"x": 1,
+						"y": 1825,
+						"w": 255,
+						"h": 402
+					}
+				},
+				{
+					"filename": "foot/move/5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 102,
+						"w": 255,
+						"h": 402
+					},
+					"frame": {
+						"x": 258,
+						"y": 1860,
+						"w": 255,
+						"h": 402
+					}
+				},
+				{
+					"filename": "foot/move/9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 102,
+						"w": 255,
+						"h": 404
+					},
+					"frame": {
+						"x": 515,
+						"y": 1882,
+						"w": 255,
+						"h": 404
+					}
+				},
+				{
+					"filename": "foot/move/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 68,
+						"y": 102,
+						"w": 255,
+						"h": 407
+					},
+					"frame": {
+						"x": 772,
+						"y": 1930,
+						"w": 255,
+						"h": 407
+					}
+				},
+				{
+					"filename": "foot/lose/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 390,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 60,
+						"y": 97,
+						"w": 270,
+						"h": 413
+					},
+					"frame": {
+						"x": 1029,
+						"y": 1932,
+						"w": 270,
+						"h": 413
+					}
+				},
+				{
+					"filename": "blood/attack1/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 205,
+						"w": 611,
+						"h": 428
+					},
+					"frame": {
+						"x": 1301,
+						"y": 1940,
+						"w": 611,
+						"h": 428
+					}
+				},
+				{
+					"filename": "blood/move/5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 188,
+						"w": 255,
+						"h": 441
+					},
+					"frame": {
+						"x": 1,
+						"y": 2229,
+						"w": 255,
+						"h": 441
+					}
+				},
+				{
+					"filename": "blood/move/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 188,
+						"w": 255,
+						"h": 445
+					},
+					"frame": {
+						"x": 258,
+						"y": 2264,
+						"w": 255,
+						"h": 445
+					}
+				},
+				{
+					"filename": "blood/move/4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 447
+					},
+					"frame": {
+						"x": 515,
+						"y": 2288,
+						"w": 255,
+						"h": 447
+					}
+				},
+				{
+					"filename": "blood/move/6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 448
+					},
+					"frame": {
+						"x": 772,
+						"y": 2339,
+						"w": 255,
+						"h": 448
+					}
+				},
+				{
+					"filename": "blood/move/2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 449
+					},
+					"frame": {
+						"x": 1029,
+						"y": 2347,
+						"w": 255,
+						"h": 449
+					}
+				},
+				{
+					"filename": "blood/move/8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 449
+					},
+					"frame": {
+						"x": 1286,
+						"y": 2370,
+						"w": 255,
+						"h": 449
+					}
+				},
+				{
+					"filename": "foot/hit/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 81,
+						"y": 61,
+						"w": 243,
+						"h": 449
+					},
+					"frame": {
+						"x": 1543,
+						"y": 2370,
+						"w": 243,
+						"h": 449
+					}
+				},
+				{
+					"filename": "blood/move/3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 180,
+						"w": 255,
+						"h": 453
+					},
+					"frame": {
+						"x": 1,
+						"y": 2672,
+						"w": 255,
+						"h": 453
+					}
+				},
+				{
+					"filename": "blood/move/7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 180,
+						"w": 255,
+						"h": 453
+					},
+					"frame": {
+						"x": 258,
+						"y": 2711,
+						"w": 255,
+						"h": 453
+					}
+				},
+				{
+					"filename": "blood/win/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 171,
+						"y": 146,
+						"w": 329,
+						"h": 487
+					},
+					"frame": {
+						"x": 515,
+						"y": 2789,
+						"w": 329,
+						"h": 487
+					}
+				},
+				{
+					"filename": "blood/hit/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 104,
+						"y": 133,
+						"w": 345,
+						"h": 496
+					},
+					"frame": {
+						"x": 846,
+						"y": 2798,
+						"w": 345,
+						"h": 496
+					}
+				},
+				{
+					"filename": "foot/jump/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 402,
+						"h": 510
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 0,
+						"w": 370,
+						"h": 510
+					},
+					"frame": {
+						"x": 1193,
+						"y": 2821,
+						"w": 370,
+						"h": 510
+					}
+				},
+				{
+					"filename": "blood/jump/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 92,
+						"y": 21,
+						"w": 458,
+						"h": 603
+					},
+					"frame": {
+						"x": 1565,
+						"y": 2821,
+						"w": 458,
+						"h": 603
 					}
 				}
 			]
@@ -1023,6 +1107,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:8558810dbc14661845ffdf872ee0f0e7:93d8a7ac6c42e7e5b840cb40930424e3:9dc69ebbe9961fdd5853809b60c6340e$"
+		"smartupdate": "$TexturePacker:SmartUpdate:8e7321a3475a4e58746b31581e2eec5b:581bdce8fb55183019360086f7001640:9dc69ebbe9961fdd5853809b60c6340e$"
 	}
 }

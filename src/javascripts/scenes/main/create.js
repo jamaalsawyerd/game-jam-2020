@@ -5,6 +5,12 @@ const UILayer = require('./local-js/layer/UILayer');
 const MainSceneController = require('./local-js/controller/MainSceneController');
 const CameraController = require('./local-js/controller/CameraController');
 const create = function(data) {
+  if(!data.player1) {
+    data = {
+      player1: 'blood',
+      player2: 'foot',
+    };
+  }
   console.log('create');
   this.game.scene.stop('intro');
   this.cameras.main.setBackgroundColor('#000000');
