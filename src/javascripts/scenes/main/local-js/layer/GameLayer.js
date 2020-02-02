@@ -29,11 +29,18 @@ class GameLayer extends Layer {
     const { controlConfig, defaultFighterConfig, fighterAnims } = FighterConfig;
     this.createFighterAnimations(scene, fighterAnims);
 
-    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood', key:'fighter1' }, facing: 'right' });
+    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood', key: 'fighter1' }, facing: 'right' });
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
-    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood', key:'fighter2' }, facing: 'left' });
+    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood', key: 'fighter2' }, facing: 'left' });
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
+
+    if(fighter1.config.character === fighter2.config.character) {
+      const pipeline = this.scene.plugins.get('RexHslAdjustPipeline').add(this.scene, 'colorpipe');
+      pipeline.setHueRotate(0.5);
+      fighter2._classVars.sprite.setPipeline('colorpipe');
+    }
+
 
     // The state machine managing the hero
     const stateMachines = [
