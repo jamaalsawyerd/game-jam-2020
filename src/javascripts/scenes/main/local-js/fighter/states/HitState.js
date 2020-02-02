@@ -11,7 +11,6 @@ class HitState extends State {
     const velX = facingLeft ? jumpVel.x : -jumpVel.x;
     
     fighter.body.setVelocityX(velX);
-    console.log(jumpVel);
     fighter.body.setVelocityY(-jumpVel.y);
     fighter.body.setMaxVelocity(jumpMaxVel.x, jumpMaxVel.y);
  
@@ -20,6 +19,7 @@ class HitState extends State {
     attackOneHitbox.setVisible(false);
     fighter.setDepth(5);
     scene.time.delayedCall(500, () => {
+      fighter.setInvincible();
       this.stateMachine.transition('idle');
       fighter.setDepth(1);
     });

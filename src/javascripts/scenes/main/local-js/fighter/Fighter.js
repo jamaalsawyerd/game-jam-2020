@@ -4,6 +4,7 @@ class Fighter extends Phaser.GameObjects.Container {
     const { config, facing } = params;
     this.config = config;
     this.facing = facing;
+    this.isInvincible = false;
 
     //temp
     const width = 125;
@@ -22,7 +23,7 @@ class Fighter extends Phaser.GameObjects.Container {
 
     const attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0).setOrigin(0, 0.5);
     attackOneHitbox.setVisible(false);
-    
+
 
 
     this.add(attackOneHitbox);
@@ -58,6 +59,24 @@ class Fighter extends Phaser.GameObjects.Container {
     const { sprite } = this._classVars;
     const { currentAnim, isPlaying } = sprite.anims;
     return { currentAnim, isPlaying, key: sprite.anims.getCurrentKey() };
+  }
+  setInvincible() {
+    this.isInvincible = true;
+    this.scene.tweens.addCounter({
+      from: 0,
+      to: 1,
+      repeat: 50,
+      duration: 10,
+      onRepeat: () => {
+        const { sprite } = this._classVars;
+        sprite.setAlpha(sprite.alpha === 1 ? 0 : 1);
+      },
+      onComplete: () => {
+        const { sprite } = this._classVars;
+        this.isInvincible = false;
+        sprite.setAlpha(1);
+      }
+    });
   }
 
 }

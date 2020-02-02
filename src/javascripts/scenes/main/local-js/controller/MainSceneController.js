@@ -40,9 +40,7 @@ class MainSceneController {
     }
   }
   checkFighterHit(index, other) {
-
-    
-    if(this.stateMachines[other].state === 'hit') return;
+    if(this.stateMachines[other].state === 'hit' || this.fighters[other].isInvincible) return;
     const a1Hitbox = this.fighters[index]._classVars.attackOneHitbox;
     const a1bounds = a1Hitbox.getBounds();
     const otherBounds = this.fighters[other]._classVars.rect.getBounds();
@@ -50,7 +48,11 @@ class MainSceneController {
 
     if(a1Hit) {
       this.stateMachines[other].transition('hit');
+      this.reportHit(this.stateMachines[other].key);
     }
+  }
+  reportHit(key) {
+    console.log(key);
   }
 }
 
