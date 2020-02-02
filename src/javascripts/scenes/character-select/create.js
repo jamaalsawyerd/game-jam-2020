@@ -7,7 +7,11 @@ const create = function() {
   }).play();
 
   const clickFX = this.sound.add('click', {
-    volume: 1,
+    volume: 0.5,
+  });
+
+  const dizzyFX = this.sound.add('dizzy', {
+    volume: 0.25,
   });
 
   const { centerX, centerY, width, height } = this.cameras.main;
@@ -81,6 +85,7 @@ const create = function() {
   this.time.delayedCall(2000, () => {
     introContainer.setVisible(false);
     selContainer.setVisible(true);
+    dizzyFX.play();
   });
 
 
