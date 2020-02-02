@@ -62,9 +62,9 @@ class MainSceneController {
     if(a1Hit) {
       this.stateMachines[other].transition('hit');
       const fighter = this.fighters[other];
-      fighter.health += this.fighters[index].damage;
+      fighter.health -= this.fighters[index].damage;
       // fighter.health += 100;
-      if(fighter.health >= fighter.config.health) {
+      if(fighter.health <= 0) {
         this.endGame(index, other);
       }
       this.layers.ui.Shake();

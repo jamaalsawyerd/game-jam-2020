@@ -33,8 +33,6 @@ class UILayer extends Layer {
       portrait2.setPipeline('colorpipe');
     }
     this.max_width = this.left.width;
-    this.left.width = 0;
-    this.right.width = 0;
     this.group.add(this.cont);
     this.group.setDepth(10);
 
