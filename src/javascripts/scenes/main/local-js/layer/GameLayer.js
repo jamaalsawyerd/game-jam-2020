@@ -4,7 +4,7 @@ const FighterStateMachine = require('../fighter/FighterStateMachine');
 const FighterConfig = require('../../../../config/fighter');
 
 class GameLayer extends Layer {
-  constructor(group, scene) {
+  constructor(group, scene, data) {
     super(group, scene);
     this;
     //get camera vars
@@ -30,10 +30,10 @@ class GameLayer extends Layer {
     const { controlConfig, defaultFighterConfig, fighterAnims } = FighterConfig;
     this.createFighterAnimations(scene, fighterAnims);
 
-    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood', key: 'fighter1' }, facing: 'right' });
+    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: data.player1, key: 'fighter1' }, facing: 'right' });
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
-    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood', key: 'fighter2' }, facing: 'left' });
+    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: data.player2, key: 'fighter2' }, facing: 'left' });
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
 
     if(fighter1.config.character === fighter2.config.character) {

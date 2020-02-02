@@ -8,7 +8,7 @@ class UILayer extends Layer {
     const y = scene.cameras.main.centerY + scene.cameras.main.scrollY;
     //this.bars = new HealthBar(scene, x, y);
     // this.bars.UpdateUI(centerX, centerY);
-    this.cont = scene.add.container(x, y - 200);
+    this.cont = scene.add.container(x, y - 210);
     this.back = scene.add.sprite(0, 0, 'ui_back');
     this.cont.add(this.back);
     this.left = scene.add.tileSprite(0, 0, 0, 0, 'bar');
@@ -19,7 +19,7 @@ class UILayer extends Layer {
     this.left.setOrigin(0, 0.5);
     this.left.setScale(-1);
     this.right.setOrigin(0, 0.5);
-    this.cont.setScale(0.6);
+    this.cont.setScale(0.45);
     this.left.setPosition(-162, 0);
     this.right.setPosition(162, 1);
     this.back.setPosition(4, -5);
@@ -30,10 +30,6 @@ class UILayer extends Layer {
     this.group.add(this.cont);
     this.group.setDepth(10);
 
-  }
-
-  SetUIScale(scale) {
-    this.cont.setScale(scale);
   }
 
   UpdateBar(player, amount) {

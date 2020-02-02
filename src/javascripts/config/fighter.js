@@ -30,16 +30,16 @@ const FighterConfig = {
       right: 'd',
       up: 'w',
       down: 's',
-      attack1: 'e',
-      attack2: 'f'
+      attack1: 'f',
+      attack2: 'g'
     },
     fighter2: {
       left: 'left',
       right: 'right',
       up: 'up',
       down: 'down',
-      attack1: 'space',
-      attack2: 'period'
+      attack1: 'n',
+      attack2: 'm'
     }
   },
   fighterAnims: {
@@ -47,6 +47,50 @@ const FighterConfig = {
       {
         key: 'attack1',
         start: 1,
+      },
+      {
+        key: 'crouch',
+        start: 1
+      },
+      {
+        key: 'hit',
+        start:1
+      },
+      {
+        key: 'idle',
+        start: 1,
+        end: 8,
+        fps: 10,
+        repeat: -1,
+      },
+      {
+        key: 'jump',
+        start: 1,
+      },
+      {
+        animName: 'move_forward',
+        key: 'move',
+        start: 1,
+        end: 8,
+        fps: 10,
+        repeat: -1
+      },
+      {
+        animName: 'move_back',
+        key: 'move',
+        reverse: true,
+        start:8,
+        end: 1,
+        fps: 10,
+        repeat: -1
+      }
+    ],
+    foot: [
+      {
+        key: 'attack1',
+        start: 1,
+        end: 7,
+        fps: 30,
       },
       {
         key: 'crouch',

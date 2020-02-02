@@ -5,8 +5,8 @@ const scene = {
   create,
   preload,
   update,
-  key: 'main',
-  active: false,
+  key: 'character-select',
+  active: true,
 };
 
 module.exports = scene;
