@@ -9,6 +9,7 @@ const config = {
   ...defaultConfig,
   scene: [
     CharacterSelectScene,
+    IntroScene,
     MainScene,
     GameEndScene,
   ]

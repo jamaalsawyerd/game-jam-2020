@@ -5,6 +5,7 @@ const preload = function() {
   this.load.image('ui_back', 'images/topui.png');
   this.load.image('bar', 'images/fillbar.png');
   this.load.image('cross', 'images/cross.png');
+  
 };
 
 module.exports = preload;

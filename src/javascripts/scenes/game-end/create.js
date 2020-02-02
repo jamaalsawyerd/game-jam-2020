@@ -1,7 +1,12 @@
 
 const create = function(data) {
   console.log('create');
-  console.log(data);
+  if(!data.winner) {
+    data = {
+      winner: 'player1',
+      character: 'blood',
+    };
+  }
   const { winner, character } = data;
   const { centerX, centerY } = this.cameras.main;
 
@@ -10,16 +15,20 @@ const create = function(data) {
 
   this.add.sprite(centerX + textOffsetX, centerY, 'gameOverBackground').setScale(0.7, 0.6);
   this.add.sprite(centerX - portraitOffset, centerY, character).setScale(0.7);
-  const text = this.add.text(centerX +textOffsetX, centerY, `Player ${winner.includes('1') ? 1 : 2}\nWins!!!!`.toUpperCase()).setOrigin(0.5);
+
+  const str = `Player ${winner.includes('1') ? 1 : 2} Wins!  `.toUpperCase();
+  const text = this.add.text(centerX + textOffsetX + 20, centerY - 10, str).setOrigin(0.5);
   text.setStyle({
-    fontSize: '65px',
+    fontFamily: 'Bangers',
+    fontSize: '85px',
     color: '#fff',
-    stroke: '#000',
-    strokeThickness: 12,
   });
 
-  this._timeToEnd = 180;
-  this._transistion = false;
+  this.time.delayedCall(3000, () => {
+    this.game.scene.start('credits');
+  });
+
+
 };
 
 module.exports = create;

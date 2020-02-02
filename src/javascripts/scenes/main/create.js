@@ -6,7 +6,7 @@ const MainSceneController = require('./local-js/controller/MainSceneController')
 const CameraController = require('./local-js/controller/CameraController');
 const create = function(data) {
   console.log('create');
-
+  this.game.scene.stop('intro');
   this.cameras.main.setBackgroundColor('#000000');
   this._gameVars = {};
   const phaserGroupManager = new PhaserGroupManager(this);
