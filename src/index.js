@@ -8,6 +8,7 @@ const CreditScene = require('./javascripts/scenes/credits');
 const config = {
   ...defaultConfig,
   scene: [
+    CreditScene, 
     CharacterSelectScene,
     MainScene,
     GameEndScene,
