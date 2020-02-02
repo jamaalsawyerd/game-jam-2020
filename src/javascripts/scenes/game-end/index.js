@@ -5,8 +5,8 @@ const scene = {
   create,
   preload,
   update,
-  key: 'preloader',
-  active: true,
+  key: 'game-end',
+  active: false,
 };
 
 module.exports = scene;
