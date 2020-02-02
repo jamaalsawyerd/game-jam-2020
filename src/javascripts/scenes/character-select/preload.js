@@ -13,6 +13,7 @@ const preload = function() {
   this.load.image('csChars', 'images/intro_characters.png');
   this.load.audio('music', 'audio/music.mp3');
   this.load.audio('click', 'audio/click.mp3');
+  this.load.audio('dizzy', 'audio/dizzy.mp3');
 };
 
 module.exports = preload;

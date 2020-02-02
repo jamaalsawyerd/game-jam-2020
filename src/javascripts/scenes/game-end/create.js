@@ -26,7 +26,7 @@ const create = function(data) {
     color: '#fff',
   });
 
-  this.time.delayedCall(5000, () => {
+  this.time.delayedCall(2500, () => {
     this.game.scene.start('credits');
   });
 

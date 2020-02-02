@@ -21,12 +21,17 @@ const create = function() {
   // const xOffset = 350;
   // this.add.sprite(centerX-xOffset, centerY + width / 6, 'leftchars').setScale(0.5);
   // this.add.sprite(centerX + xOffset, centerY + width/ 6, 'rightchars').setScale(0.5);
+
+  const btn = this.add.image(75, 140, 'restart_btn').setOrigin(0).setScale(0.33);
+  btn.setInteractive({useHandCursor: true}).on('pointerdown', ()=>{
+    location.reload();
+  });
 };
 
-function createText(x, y, message, scene){
-  const parts = message.split(":");
+function createText(x, y, message, scene) {
+  const parts = message.split(':');
   const xOffset = 20;
-  const role = scene.add.text(x- xOffset, y, parts[0]).setOrigin(1, 0.5);
+  const role = scene.add.text(x - xOffset, y, parts[0]).setOrigin(1, 0.5);
   role.setStyle({
     fontSize: '30px',
     color: '#fff',
@@ -40,6 +45,7 @@ function createText(x, y, message, scene){
     stroke: '#000',
     strokeThickness: 8,
   });
+
 
 }
 
