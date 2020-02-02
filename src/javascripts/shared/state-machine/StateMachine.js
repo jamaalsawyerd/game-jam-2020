@@ -3,6 +3,7 @@ class StateMachine {
     this.initialState = initialState;
     this.possibleStates = possibleStates;
     this.stateParams = stateParams;
+    this.previousState = null;
     this.state = null;
     this.scene = scene;
     this.key = stateParams.key || 'default';
@@ -20,6 +21,7 @@ class StateMachine {
     // On the first step, the state is null and we need to initialize the first state.
     if(this.state === null) {
       // this.log(`entering initial state: ${this.initialState}`);
+      this.previousState = this.initialState;
       this.state = this.initialState;
       this.possibleStates[this.state].enter(this.scene, this.stateParams);
     }
@@ -30,6 +32,7 @@ class StateMachine {
 
   transition(newState, enterParams = {}) {
     // this.log(`transitioning state: ${this.state} => ${newState}`);
+    this.previousState = this.state;
     this.state = newState;
     this.possibleStates[this.state].enter(this.scene, this.stateParams, enterParams);
   }
