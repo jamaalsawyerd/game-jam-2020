@@ -6,23 +6,31 @@ class Fighter extends Phaser.GameObjects.Container {
     this.facing = facing;
 
     //temp
-    const width = 90;
+    const width = 125;
     const height = 175;
     this.setSize(width, height);
     this.defaultColor = params.defaultColor || 0xffffff;
-    const rect = scene.add.rectangle(0, 0, width, height, this.defaultColor, 0.5);
+    const rect = scene.add.rectangle(0, 0, width, height, this.defaultColor, 0);
     this.add(rect);
 
     const sprite = scene.add.sprite(0, height / 2, 'doctors', `${config.character}/idle/1.png`);
-    sprite.setOrigin(0.5, 1).setScale(0.7);
+    sprite.setOrigin(0.5, 1).setScale(0.66);
     sprite.on('animationcomplete', (anim, frame) => {
       sprite.emit('animationcomplete_' + anim.key, anim, frame);
     });
-    this.add(sprite);    
+    this.add(sprite);
 
-    
+    const attackOneHitbox = scene.add.rectangle(0, -30, 200, 30, 0xff0000, 0.5).setOrigin(0, 0.5);
+    scene.physics.add.existing(attackOneHitbox);
+    attackOneHitbox.body.setAllowGravity(false);
+    attackOneHitbox.setVisible(false);
+    attackOneHitbox.body.enabled = false;
+
+
+    this.add(attackOneHitbox);
     this._classVars = {
       sprite,
+      attackOneHitbox,
     };
 
     scene.physics.add.existing(this);
@@ -38,8 +46,11 @@ class Fighter extends Phaser.GameObjects.Container {
     scene.add.existing(this);
     this.playAnim('idle');
     if(facing === 'left') {
-      this.scaleX = -1;
+      sprite.scaleX *= -1;
+      attackOneHitbox.x = attackOneHitbox.width * -1; 
     }
+
+
 
   }
 

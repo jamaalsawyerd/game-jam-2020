@@ -18,6 +18,7 @@ class MainSceneController {
     this.checkFighterFacing();
     this.checkFighterPositions();
     this.scene.physics.world.collide(this.fighters, this.floor);
+    this.scene.physics.world.collide(this.fighters[0], this.fighters[1]);
     this.stateMachines.forEach(sm => sm.step());
     this.cameraController.UpdatePosition(this.fighters, this.scene)
     this.cameraController.UpdateWorldBounds(this.scene);
@@ -36,6 +37,7 @@ class MainSceneController {
     this.fighters.forEach((f) => {
       if(f.y + f.height / 2 > this.floor.y) {
         f.y = this.floor.y - f.height / 2;
+        f.body.setVelocityY(0);
       }
     });
   }
@@ -45,8 +47,8 @@ class MainSceneController {
     if(facing !== side) {
       this.fighters[0].facing = this.fighters[1].facing;
       this.fighters[1].facing = facing;
-      this.fighters[0].scaleX *= -1;
-      this.fighters[1].scaleX *= -1;
+      this.fighters[0]._classVars.sprite.scaleX *= -1;
+      this.fighters[1]._classVars.sprite.scaleX *= -1;
     }
   }
   takeDamage(fighterName, fighter, amount){
