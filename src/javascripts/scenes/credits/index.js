@@ -6,7 +6,7 @@ const scene = {
   preload,
   update,
   key: 'credits',
-  active: true,
+  active: false,
 };
 
 module.exports = scene;

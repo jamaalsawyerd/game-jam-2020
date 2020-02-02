@@ -6,7 +6,7 @@ const scene = {
   preload,
   update,
   key: 'character-select',
-  active: false,
+  active: true,
 };
 
 module.exports = scene;
