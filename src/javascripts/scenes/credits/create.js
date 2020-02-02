@@ -2,25 +2,25 @@
 const create = function() {
   console.log('credits create');
   const { centerX, centerY, width, height } = this.cameras.main;
-  this.add.sprite(centerX, centerY, 'creditsBack');
+  this.add.sprite(centerX, centerY, 'credits');
 
   //this.add.rectangle(centerX, centerY, width, height, 0x808080, 1);
-  const spriteHeight = 50; 
-  this.add.sprite(centerX, centerY - spriteHeight, 'credits').setScale(0.8);
-  this.add.sprite(centerX, centerY - spriteHeight - 40, 'ggjLogo').setScale(0.2);
-  const credits = [
-    "Potentially Long Roll : Potentially Long Name",
-    "Short Roll : Short Name", 
-    "Third Name : Hello World",
-    "A lot of : Names",
-  ]
-  const yOffset = 50;
-  for (var i = 0; i < credits.length; ++i){
-    createText(centerX, centerY + yOffset * i, credits[i],  this);
-  }
-  const xOffset = 350;
-  this.add.sprite(centerX-xOffset, centerY + width / 6, 'leftchars').setScale(0.5);
-  this.add.sprite(centerX + xOffset, centerY + width/ 6, 'rightchars').setScale(0.5);
+  // const spriteHeight = 50; 
+  // this.add.sprite(centerX, centerY - spriteHeight, 'credits').setScale(0.8);
+  // this.add.sprite(centerX, centerY - spriteHeight - 40, 'ggjLogo').setScale(0.2);
+  // const credits = [
+  //   "Potentially Long Roll : Potentially Long Name",
+  //   "Short Roll : Short Name", 
+  //   "Third Name : Hello World",
+  //   "A lot of : Names",
+  // ]
+  // const yOffset = 50;
+  // for (var i = 0; i < credits.length; ++i){
+  //   createText(centerX, centerY + yOffset * i, credits[i],  this);
+  // }
+  // const xOffset = 350;
+  // this.add.sprite(centerX-xOffset, centerY + width / 6, 'leftchars').setScale(0.5);
+  // this.add.sprite(centerX + xOffset, centerY + width/ 6, 'rightchars').setScale(0.5);
 };
 
 function createText(x, y, message, scene){
