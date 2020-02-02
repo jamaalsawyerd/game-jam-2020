@@ -5,15 +5,19 @@ class IdleState extends State {
     const { config } = fighter;
     fighter.body.setAcceleration(0, 0);
     fighter.body.setMaxVelocity(config.maxVel.x, config.maxVel.y);
+    fighter.playAnim('idle');
   }
 
   execute(scene, stateParams) {
     const { controls } = stateParams;
-    const { left, right, up } = controls;
-    const bothDown = left.isDown && right.isDown;
-    if(up.isDown) {
-      this.stateMachine.transition('jump');
-    } else if((left.isDown || right.isDown) && !bothDown) {
+    const { left, right, up, down, attack1 } = controls;
+    const LRDown = left.isDown && right.isDown;
+    const UDDown = up.isDown && down.isDown;
+    if(Phaser.Input.Keyboard.JustDown(attack1)) {
+      this.stateMachine.transition('attackOne');
+    } else if( (down.isDown || Phaser.Input.Keyboard.JustDown(up)) && !UDDown) {
+      this.stateMachine.transition(down.isDown ? 'crouch' : 'jump');
+    } else if((left.isDown || right.isDown) && !LRDown) {
       this.stateMachine.transition('move', { direction: left.isDown ? 'left' : 'right' });
     }
   }

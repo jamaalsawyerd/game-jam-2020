@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "doctors.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1687,
+				"h": 1785
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "blood/jump/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 92,
+						"y": 21,
+						"w": 458,
+						"h": 603
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 458,
+						"h": 603
+					}
+				},
+				{
+					"filename": "blood/attack1/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 205,
+						"w": 611,
+						"h": 428
+					},
+					"frame": {
+						"x": 1,
+						"y": 606,
+						"w": 611,
+						"h": 428
+					}
+				},
+				{
+					"filename": "blood/hit/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 104,
+						"y": 133,
+						"w": 345,
+						"h": 496
+					},
+					"frame": {
+						"x": 461,
+						"y": 1,
+						"w": 345,
+						"h": 496
+					}
+				},
+				{
+					"filename": "blood/crouch/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 134,
+						"y": 303,
+						"w": 373,
+						"h": 330
+					},
+					"frame": {
+						"x": 1,
+						"y": 1036,
+						"w": 373,
+						"h": 330
+					}
+				},
+				{
+					"filename": "blood/idle/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 245,
+						"w": 284,
+						"h": 388
+					},
+					"frame": {
+						"x": 1,
+						"y": 1368,
+						"w": 284,
+						"h": 388
+					}
+				},
+				{
+					"filename": "blood/idle/2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 247,
+						"w": 284,
+						"h": 386
+					},
+					"frame": {
+						"x": 287,
+						"y": 1368,
+						"w": 284,
+						"h": 386
+					}
+				},
+				{
+					"filename": "blood/move/3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 180,
+						"w": 255,
+						"h": 453
+					},
+					"frame": {
+						"x": 573,
+						"y": 1036,
+						"w": 255,
+						"h": 453
+					}
+				},
+				{
+					"filename": "blood/move/7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 180,
+						"w": 255,
+						"h": 453
+					},
+					"frame": {
+						"x": 614,
+						"y": 499,
+						"w": 255,
+						"h": 453
+					}
+				},
+				{
+					"filename": "blood/move/2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 449
+					},
+					"frame": {
+						"x": 808,
+						"y": 1,
+						"w": 255,
+						"h": 449
+					}
+				},
+				{
+					"filename": "blood/move/8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 449
+					},
+					"frame": {
+						"x": 830,
+						"y": 954,
+						"w": 255,
+						"h": 449
+					}
+				},
+				{
+					"filename": "blood/idle/5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 254,
+						"w": 284,
+						"h": 379
+					},
+					"frame": {
+						"x": 830,
+						"y": 1405,
+						"w": 284,
+						"h": 379
+					}
+				},
+				{
+					"filename": "blood/move/6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 448
+					},
+					"frame": {
+						"x": 871,
+						"y": 452,
+						"w": 255,
+						"h": 448
+					}
+				},
+				{
+					"filename": "blood/move/4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 184,
+						"w": 255,
+						"h": 447
+					},
+					"frame": {
+						"x": 1065,
+						"y": 1,
+						"w": 255,
+						"h": 447
+					}
+				},
+				{
+					"filename": "blood/move/1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 188,
+						"w": 255,
+						"h": 445
+					},
+					"frame": {
+						"x": 1087,
+						"y": 902,
+						"w": 255,
+						"h": 445
+					}
+				},
+				{
+					"filename": "blood/move/5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 200,
+						"y": 188,
+						"w": 255,
+						"h": 441
+					},
+					"frame": {
+						"x": 1128,
+						"y": 450,
+						"w": 255,
+						"h": 441
+					}
+				},
+				{
+					"filename": "blood/idle/8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 247,
+						"w": 284,
+						"h": 386
+					},
+					"frame": {
+						"x": 1322,
+						"y": 1,
+						"w": 284,
+						"h": 386
+					}
+				},
+				{
+					"filename": "blood/idle/3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 250,
+						"w": 284,
+						"h": 383
+					},
+					"frame": {
+						"x": 1116,
+						"y": 1349,
+						"w": 284,
+						"h": 383
+					}
+				},
+				{
+					"filename": "blood/idle/7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 250,
+						"w": 284,
+						"h": 383
+					},
+					"frame": {
+						"x": 1344,
+						"y": 893,
+						"w": 284,
+						"h": 383
+					}
+				},
+				{
+					"filename": "blood/idle/4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 252,
+						"w": 284,
+						"h": 381
+					},
+					"frame": {
+						"x": 1402,
+						"y": 1278,
+						"w": 284,
+						"h": 381
+					}
+				},
+				{
+					"filename": "blood/idle/6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 611,
+						"h": 633
+					},
+					"spriteSourceSize": {
+						"x": 168,
+						"y": 252,
+						"w": 284,
+						"h": 381
+					},
+					"frame": {
+						"x": 1385,
+						"y": 389,
+						"w": 284,
+						"h": 381
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:645e050198d48519c4b42494860225dc:19b213d3674e0c1e15b0122e0202a06b:9dc69ebbe9961fdd5853809b60c6340e$"
+	}
+}
