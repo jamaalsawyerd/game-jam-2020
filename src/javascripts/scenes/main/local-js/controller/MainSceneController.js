@@ -10,8 +10,7 @@ class MainSceneController {
     this.cameraController = scene._gameVars.cameraController;
     this.cameraController.UpdatePosition(this.fighters, this.scene);
     this.skipFrames = 60;
-    this.debugKey1 = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ONE);
-    this.debugKey2 = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.TWO);
+    this.gameEnded = false;
   }
 
   onUpdate(time, delta) {
@@ -21,22 +20,15 @@ class MainSceneController {
     this.checkFighterHit(1, 0);
     this.scene.physics.world.collide(this.fighters, this.floor);
     this.scene.physics.world.collide(this.fighters[0], this.fighters[1]);
-    this.stateMachines.forEach(sm => sm.step());
+
+    if(!this.gameEnded) {
+      this.stateMachines.forEach(sm => sm.step());
+    }
     this.cameraController.UpdatePosition(this.fighters, this.scene);
     if(this.skipFrames > 0) {
       this.skipFrames--;
     } else {
       this.cameraController.UpdateWorldBounds(this.scene);
-    }
-
-
-    if(Phaser.Input.Keyboard.JustDown(this.debugKey1)) {
-      //this.takeDamage("fighter1", this.fighters[0], this.fighters[0].damage);
-      this.layers.ui.Shake();
-    }
-    if(Phaser.Input.Keyboard.JustDown(this.debugKey2)) {
-      //this.takeDamage("fighter2", this.fighters[1], this.fighters[1].damage);
-      this.layers.ui.Unshake();
     }
   }
 
@@ -73,7 +65,7 @@ class MainSceneController {
       const fighter = this.fighters[other];
       fighter.health += this.fighters[index].damage;
       if(fighter.health >= fighter.config.health) {
-        this.endGame();
+        this.endGame(index, other);
       }
       console.log(fighter.health);
       console.log(fighter.config.health);
@@ -84,8 +76,8 @@ class MainSceneController {
   reportHit(key) {
     console.log(key);
   }
-  endGame() {
-    alert('Game Over');
+  endGame(winner, loser) {
+    this.gameEnded = true;
   }
 }
 
