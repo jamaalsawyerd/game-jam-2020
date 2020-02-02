@@ -29,11 +29,11 @@ class GameLayer extends Layer {
     const { controlConfig, defaultFighterVars, defaultFighterConfig, fighterAnims } = FighterConfig;
     this.createFighterAnimations(scene, fighterAnims);
 
-    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood' }, facing: 'right' });
+    const fighter1 = new Fighter(scene, centerX - offsetX, groundY, { config: { ...defaultFighterConfig, character: 'blood', key:'fighter1' }, facing: 'right' });
     const f1Vars = { ...defaultFighterVars };
     const f1Controls = this.setFighterControls(scene, controlConfig.fighter1);
 
-    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood' }, facing: 'left' });
+    const fighter2 = new Fighter(scene, centerX + 200, groundY, { config: { ...defaultFighterConfig, character: 'blood', key:'fighter2' }, facing: 'left' });
     const f2Vars = { ...defaultFighterVars };
     const f2Controls = this.setFighterControls(scene, controlConfig.fighter2);
 
