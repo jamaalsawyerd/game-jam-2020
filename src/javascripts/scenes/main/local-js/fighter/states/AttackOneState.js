@@ -16,6 +16,10 @@ class AttackOneState extends State {
     });
   }
 
+  exit(scene, stateParams) {
+
+  }
+
   execute(scene, stateParams) {
 
   }

@@ -1,7 +1,7 @@
 const create = function(data) {
   this.game.scene.stop('character-select');
   const clickFX = this.sound.add('click', {
-    volume: 1,
+    volume: 0.5,
   });
   const { player1, player2 } = data;
   const { centerX, centerY } = this.cameras.main;

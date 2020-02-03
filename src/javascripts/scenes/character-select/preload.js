@@ -14,6 +14,13 @@ const preload = function() {
   this.load.audio('music', 'audio/music.mp3');
   this.load.audio('click', 'audio/click.mp3');
   this.load.audio('dizzy', 'audio/dizzy.mp3');
+  this.load.audio('thud', 'audio/thud.mp3');
+  this.load.audio('ding', 'audio/ding.mp3');
+  this.load.audio('blood_hit', 'audio/blood_hit.mp3');
+  this.load.audio('blood_idle', 'audio/blood_idle.mp3');
+  this.load.audio('foot_hit', 'audio/foot_hit.mp3');
+  this.load.audio('foot_idle', 'audio/foot_idle.mp3');
+  
 };
 
 module.exports = preload;

@@ -3,6 +3,10 @@ class State {
 
   }
 
+  exit() {
+    
+  }
+
   execute() {
 
   }

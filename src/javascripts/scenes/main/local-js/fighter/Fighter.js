@@ -6,6 +6,8 @@ class Fighter extends Phaser.GameObjects.Container {
     this.facing = facing;
     this.isInvincible = false;
 
+    this.audio = this.setAudio(scene, config.character);
+
     //temp
     const width = 125;
     const height = 175;
@@ -75,10 +77,35 @@ class Fighter extends Phaser.GameObjects.Container {
     }
   }
 
+  setAudio(scene, char) {
+    return {
+      hit: scene.sound.add(`${char}_hit`, {
+        volume: 0.5,
+      }),
+      idle: scene.sound.add(`${char}_idle`, {
+        volume: 0.1,
+      })
+    };
+  }
+
+  getAudio(key) {
+    return this.audio[key];
+  }
+
   playAnim(key) {
     const { config } = this;
     const { sprite } = this._classVars;
     sprite.play(`${config.character}_${key}`);
+  }
+
+  playAudio(key) {
+    this.audio[key].play();
+    return this.audio[key];
+  }
+
+  stopAudio(key) {
+    this.audio[key].stop();
+    return this.audio[key];
   }
 
   getCurrentAnim() {

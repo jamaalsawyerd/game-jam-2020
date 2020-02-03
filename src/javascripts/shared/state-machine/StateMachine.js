@@ -34,6 +34,7 @@ class StateMachine {
     // this.log(`transitioning state: ${this.state} => ${newState}`);
     this.previousState = this.state;
     this.state = newState;
+    this.possibleStates[this.previousState].exit(this.scene, this.stateParams);
     this.possibleStates[this.state].enter(this.scene, this.stateParams, enterParams);
   }
 }

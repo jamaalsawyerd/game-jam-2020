@@ -1,7 +1,7 @@
 
 const create = function() {
   console.log('create');
-  const music = this.sound.add('music', {
+  this.sound.add('music', {
     loop:true,
     volume: 0.5,
   }).play();

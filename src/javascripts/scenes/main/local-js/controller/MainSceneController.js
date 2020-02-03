@@ -11,6 +11,14 @@ class MainSceneController {
     this.cameraController.UpdatePosition(this.fighters, this.scene);
     this.skipFrames = 60;
     this.gameEnded = false;
+    this.audio = {
+      thud: scene.sound.add('thud', {
+        volume: 1.0,
+      }),
+      ding: scene.sound.add('ding', {
+        volume: 1.0,
+      })
+    };
   }
 
   onUpdate(time, delta) {
@@ -60,6 +68,7 @@ class MainSceneController {
     const a1Hit = a1Hitbox.visible && Phaser.Geom.Intersects.RectangleToRectangle(a1bounds, otherBounds) && this.stateMachines[other].state !== 'hit';
 
     if(a1Hit) {
+      this.audio.thud.play();
       this.stateMachines[other].transition('hit');
       const fighter = this.fighters[other];
       fighter.health -= this.fighters[index].damage;
@@ -75,12 +84,13 @@ class MainSceneController {
   endGame(winner, loser) {
     const { character, key } = this.fighters[winner].config;
     this.gameEnded = true;
-    this.scene.time.delayedCall(2000, ()=>{
+    this.scene.time.delayedCall(2000, () => {
       this.fighters[winner].playAnim('win');
       this.fighters[loser].playAnim('lose');
+      this.audio.ding.play();
     });
     this.scene.time.delayedCall(4000, () => {
-      this.scene.game.scene.start('game-end', { winner:key, character: character });
+      this.scene.game.scene.start('game-end', { winner: key, character: character });
     });
   }
 }

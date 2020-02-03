@@ -15,6 +15,7 @@ class HitState extends State {
     fighter.body.setMaxVelocity(jumpMaxVel.x * 2, jumpMaxVel.y);
 
     fighter.playAnim('hit');
+    fighter.playAudio('hit');
     const { attackOneHitbox } = fighter._classVars;
     attackOneHitbox.setVisible(false);
     fighter.setDepth(5);
