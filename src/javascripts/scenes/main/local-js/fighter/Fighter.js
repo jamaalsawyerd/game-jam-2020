@@ -98,8 +98,8 @@ class Fighter extends Phaser.GameObjects.Container {
     sprite.play(`${config.character}_${key}`);
   }
 
-  playAudio(key) {
-    this.audio[key].play();
+  playAudio(key, config) {
+    this.audio[key].play(config);
     return this.audio[key];
   }
 

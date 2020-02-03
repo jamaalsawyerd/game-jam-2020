@@ -7,8 +7,8 @@ const CameraController = require('./local-js/controller/CameraController');
 const create = function(data) {
   if(!data.player1) {
     data = {
-      player1: 'blood',
-      player2: 'foot',
+      player1: 'foot',
+      player2: 'blood',
     };
   }
   console.log('create');

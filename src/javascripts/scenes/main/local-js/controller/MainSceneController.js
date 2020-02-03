@@ -86,7 +86,9 @@ class MainSceneController {
     this.gameEnded = true;
     this.scene.time.delayedCall(2000, () => {
       this.fighters[winner].playAnim('win');
+      this.fighters[winner].stopAudio('idle');
       this.fighters[loser].playAnim('lose');
+      this.fighters[loser].stopAudio('idle');
       this.audio.ding.play();
     });
     this.scene.time.delayedCall(4000, () => {
