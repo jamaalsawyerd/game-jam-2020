@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --config webpack/base.js",
     "compress": "chmod +x bash/compress.sh && bash/compress.sh",
     "serve": "npm run build && node_modules/.bin/http-server dist -a localhost -p 8000",
-    "zip": "npm run build && rm -f wounded.zip && zip -r wounded.zip dist"
+    "zip": "npm run build && mv dist wounded && rm -f wounded.zip && zip -r wounded.zip wounded && rm -rf wounded"
   },
   "repository": {
     "type": "git",
