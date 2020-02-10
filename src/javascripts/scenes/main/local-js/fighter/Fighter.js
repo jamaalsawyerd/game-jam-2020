@@ -79,12 +79,22 @@ class Fighter extends Phaser.GameObjects.Container {
 
   setAudio(scene, char) {
     return {
+      attack: scene.sound.add(`${char}_attack`, {
+        volume: 0.8,
+      }),
+      connect: scene.sound.add(`${char}_connect`, {
+        volume: 0.8,
+      }),
       hit: scene.sound.add(`${char}_hit`, {
         volume: 0.5,
       }),
       idle: scene.sound.add(`${char}_idle`, {
-        volume: 0.1,
-      })
+        volume: 0.05,
+      }),
+      jump: scene.sound.add(`${char}_jump`, {
+        volume: 0.8,
+      }),
+      
     };
   }
 

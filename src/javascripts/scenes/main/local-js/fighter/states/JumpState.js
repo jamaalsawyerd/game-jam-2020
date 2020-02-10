@@ -1,6 +1,6 @@
 const State = require('../../../../../shared/state-machine/State');
 class JumpState extends State {
-  enter(scene, stateParams, enterParams) {
+  enter(scene, stateParams) {
     const { controls, fighter } = stateParams;
     const { config } = fighter;
     const { left, right } = controls;
@@ -17,6 +17,7 @@ class JumpState extends State {
       fighter.body.setMaxVelocity(config.jumpMaxVel.x, config.jumpMaxVel.y);
     }
     fighter.playAnim('jump');
+    fighter.playAudio('jump');
   }
 
   execute(scene, stateParams) {

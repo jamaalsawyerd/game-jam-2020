@@ -68,7 +68,8 @@ class MainSceneController {
     const a1Hit = a1Hitbox.visible && Phaser.Geom.Intersects.RectangleToRectangle(a1bounds, otherBounds) && this.stateMachines[other].state !== 'hit';
 
     if(a1Hit) {
-      this.audio.thud.play();
+      this.fighters[index].stopAudio('attack');
+      this.fighters[index].playAudio('connect');
       this.stateMachines[other].transition('hit');
       const fighter = this.fighters[other];
       fighter.health -= this.fighters[index].damage;

@@ -5,6 +5,7 @@ class AttackOneState extends State {
     
     fighter.body.setAcceleration(0, 0);
     fighter.playAnim('attack1');
+    fighter.playAudio('attack');
     const { attackOneHitbox} = fighter._classVars;
     attackOneHitbox.setVisible(true);
     fighter.setDepth(5);

@@ -22,10 +22,24 @@ const create = function() {
   // this.add.sprite(centerX-xOffset, centerY + width / 6, 'leftchars').setScale(0.5);
   // this.add.sprite(centerX + xOffset, centerY + width/ 6, 'rightchars').setScale(0.5);
 
+  const restartSound = this.sound.add('restart', { volume: 0.8 });
+
+  const triggerRestart = (btn) => {
+    restartSound.play();
+    btn.disableInteractive();
+    this.cameras.main.fade(1300, 0, 0, 0, false, (params, progress) => {
+      if(progress === 1) {
+        location.reload();
+      }
+    });
+  };
+
+
   const btn = this.add.image(75, 140, 'restart_btn').setOrigin(0).setScale(0.33);
-  btn.setInteractive({useHandCursor: true}).on('pointerdown', ()=>{
-    location.reload();
+  btn.setInteractive({ useHandCursor: true }).on('pointerdown', () => {
+    triggerRestart(btn);
   });
+
 };
 
 function createText(x, y, message, scene) {

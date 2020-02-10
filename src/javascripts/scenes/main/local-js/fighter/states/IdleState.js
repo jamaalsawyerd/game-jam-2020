@@ -21,7 +21,7 @@ class IdleState extends State {
     });
   }
 
-  enter(scene, stateParams, enterParams) {
+  enter(scene, stateParams) {
     const { fighter } = stateParams;
     const { config } = fighter;
     fighter.body.setAcceleration(0, 0);

@@ -16,10 +16,22 @@ const preload = function() {
   this.load.audio('dizzy', 'audio/dizzy.mp3');
   this.load.audio('thud', 'audio/thud.mp3');
   this.load.audio('ding', 'audio/ding.mp3');
+  this.load.audio('restart', 'audio/restart.mp3');
+
+  
+  this.load.audio('blood_attack', 'audio/blood_attack.mp3');
+  this.load.audio('blood_connect', 'audio/blood_connect.mp3');
   this.load.audio('blood_hit', 'audio/blood_hit.mp3');
   this.load.audio('blood_idle', 'audio/blood_idle.mp3');
+  this.load.audio('blood_jump', 'audio/blood_jump.mp3');
+
+
+
+  this.load.audio('foot_attack', 'audio/foot_attack.mp3');
+  this.load.audio('foot_connect', 'audio/foot_connect.mp3');
   this.load.audio('foot_hit', 'audio/foot_hit.mp3');
   this.load.audio('foot_idle', 'audio/foot_idle.mp3');
+  this.load.audio('foot_jump', 'audio/foot_jump.mp3');
   
 };
 
